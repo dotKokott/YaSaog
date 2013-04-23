@@ -23,8 +23,8 @@ namespace YaSaog.Entities {
 
         public int ZDepth = 1;
 
-        public int X { get; set; }
-        public int Y { get; set; }
+        public float X { get; set; }
+        public float Y { get; set; }
 
         public Vector2 Position {
             get {
@@ -38,7 +38,7 @@ namespace YaSaog.Entities {
 
         public Rectangle BoundingBox {
             get {
-                return new Rectangle(X + (int)Offset.X, Y + (int)Offset.Y, (int)Size.X, (int)Size.Y);
+                return new Rectangle((int)X + (int)Offset.X, (int)Y + (int)Offset.Y, (int)Size.X, (int)Size.Y);
             }
         }
 

@@ -1,6 +1,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using YaSaog.Scenes;
 
 namespace YaSaog {
 
@@ -15,7 +16,7 @@ namespace YaSaog {
         public static int Height = 800;
         public bool IsFullScreen = false;
 
-        //public ScreenManager ScreenManager;
+        public SceneManager SceneManager;
         
         public MainGame() {
             graphics = new GraphicsDeviceManager(this);
@@ -23,19 +24,23 @@ namespace YaSaog {
 
             graphics.PreferredBackBufferWidth = Width;
             graphics.PreferredBackBufferHeight = Height;
-            graphics.SynchronizeWithVerticalRetrace = false;
+            graphics.SynchronizeWithVerticalRetrace = true;
             this.viewPortRectangle = new Rectangle(0, 0, Width, Height);
 
-            graphics.IsFullScreen = IsFullScreen;
+            graphics.IsFullScreen = IsFullScreen;            
         }
 
         protected override void Initialize() {
             base.Initialize();
+
+            SceneManager.AddScreen(new GameScene());
         }
 
         protected override void LoadContent() {
             spriteBatch = new ExtendedSpriteBatch(GraphicsDevice);
             Assets.LoadContent(Content);
+
+            SceneManager = new SceneManager(this);
 
             float scaleX = graphics.GraphicsDevice.Viewport.Width / Width;
             float scaleY = graphics.GraphicsDevice.Viewport.Height / Height;
@@ -51,6 +56,8 @@ namespace YaSaog {
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
+            SceneManager.Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -59,10 +66,7 @@ namespace YaSaog {
             
             spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, spriteScale);
 
-
-
-
-
+            SceneManager.Draw(spriteBatch);
 
             spriteBatch.End();
 
