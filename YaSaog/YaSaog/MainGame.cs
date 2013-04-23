@@ -35,6 +35,7 @@ namespace YaSaog {
 
         protected override void LoadContent() {
             spriteBatch = new ExtendedSpriteBatch(GraphicsDevice);
+            Assets.LoadContent(Content);
 
             float scaleX = graphics.GraphicsDevice.Viewport.Width / Width;
             float scaleY = graphics.GraphicsDevice.Viewport.Height / Height;
