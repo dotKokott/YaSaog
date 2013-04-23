@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YaSaog", "YaSaog\YaSaog\YaSaog.csproj", "{8B52446B-B55A-4391-A1FB-7B3B6A5AE3D8}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "YaSaogContent", "YaSaog\YaSaogContent\YaSaogContent.contentproj", "{2F36C952-2EBC-4B4F-ACC7-D4EDCCB88DF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B52446B-B55A-4391-A1FB-7B3B6A5AE3D8}.Debug|x86.ActiveCfg = Debug|x86
+		{8B52446B-B55A-4391-A1FB-7B3B6A5AE3D8}.Debug|x86.Build.0 = Debug|x86
+		{8B52446B-B55A-4391-A1FB-7B3B6A5AE3D8}.Release|x86.ActiveCfg = Release|x86
+		{8B52446B-B55A-4391-A1FB-7B3B6A5AE3D8}.Release|x86.Build.0 = Release|x86
+		{2F36C952-2EBC-4B4F-ACC7-D4EDCCB88DF0}.Debug|x86.ActiveCfg = Debug|x86
+		{2F36C952-2EBC-4B4F-ACC7-D4EDCCB88DF0}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
