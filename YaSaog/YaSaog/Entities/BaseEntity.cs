@@ -57,7 +57,7 @@ namespace YaSaog.Entities {
             Coroutines.Update();
         }
 
-        public abstract void Draw(SpriteBatch spriteBatch);
+        public abstract void Draw(ExtendedSpriteBatch spriteBatch);
         public abstract void Delete();
     }
 }

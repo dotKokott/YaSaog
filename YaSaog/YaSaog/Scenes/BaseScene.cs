@@ -51,7 +51,7 @@ namespace YaSaog.Scenes {
             Coroutines.Update();
         }
 
-        public virtual void Draw(SpriteBatch spriteBatch) {
+        public virtual void Draw(ExtendedSpriteBatch spriteBatch) {
             foreach (var ent in Entities.ToArray().OrderBy(e => e.ZDepth)) {
                 ent.Draw(spriteBatch);
             }

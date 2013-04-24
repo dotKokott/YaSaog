@@ -19,8 +19,14 @@ namespace YaSaog.Entities {
 
             Size = new Vector2(75, 75);
 
+            Offset = new Vector2(-Size.X / 2,  -Size.Y / 2);
+
+
             velocity = new Vector2(0f, 50f);
             friction = new Vector2(0.2f, 0.2f);
+
+            collidable = true;
+            CollisionType = "bubble";
         }
 
         public override void Init() {        
@@ -34,17 +40,26 @@ namespace YaSaog.Entities {
             if (Keyboard.GetState().IsKeyDown(Keys.Up)) velocity += new Vector2(0, -2f);
             if (Keyboard.GetState().IsKeyDown(Keys.Down)) velocity += new Vector2(0, 2f);
 
-            float _x = Math.Max(0, Math.Abs(velocity.X - friction.X));
-            float _y = Math.Max(0, Math.Abs(velocity.Y - friction.Y));            
+            var particles = GetCollidingEntities("windparticle");
+            //TODO: WTF TOARRAY
+            foreach (var part in particles.ToArray()) {
+                Screen.RemoveEntity(part);
+                velocity += (part as WindParticle).Velocity / 100;
+            }
+
+            float _x = Math.Max(0, Math.Abs(velocity.X) - friction.X);
+            float _y = Math.Max(0, Math.Abs(velocity.Y) - friction.Y);            
 
             velocity = new Vector2(_x * Math.Sign(velocity.X), _y * Math.Sign(velocity.Y));
 
             X += velocity.X * (float)gameTime.ElapsedGameTime.TotalSeconds;
             Y += velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+           
         }
 
-        public override void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch) {
-            spriteBatch.Draw(Assets.BubbleBlue, BoundingBox, null, Color.White, 0, new Vector2(Assets.BubbleBlue.Width / 2, Assets.BubbleBlue.Height / 2), SpriteEffects.None, 0);
+        public override void Draw(ExtendedSpriteBatch spriteBatch) {
+            spriteBatch.Draw(Assets.BubbleBlue, new Rectangle((int)X, (int)Y, (int)Size.X, (int)Size.Y), null, Color.White, 0, new Vector2(Assets.BubbleBlue.Width / 2, Assets.BubbleBlue.Height / 2), SpriteEffects.None, 0);
         }
 
         public override void Delete() {            

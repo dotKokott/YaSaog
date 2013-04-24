@@ -9,7 +9,9 @@ namespace YaSaog {
 
         private ExtendedSpriteBatch spriteBatch;
         private readonly Rectangle viewPortRectangle;
-        private Matrix spriteScale;        
+        private Matrix spriteScale;
+
+        private DebugComponent debugComponent;
         
         public GraphicsDeviceManager graphics;
         public static int Width = 1280;
@@ -32,6 +34,8 @@ namespace YaSaog {
 
         protected override void Initialize() {
             base.Initialize();
+
+            debugComponent = new DebugComponent(this);
 
             SceneManager.AddScreen(new GameScene());
         }
@@ -58,15 +62,19 @@ namespace YaSaog {
 
             SceneManager.Update(gameTime);
 
+            debugComponent.Update(gameTime);
+            
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime) {
             GraphicsDevice.Clear(Color.Black);
-            
-            spriteBatch.Begin(SpriteSortMode.Deferred, null, null, null, null, null, spriteScale);
+
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, null, null, null, null, spriteScale);
 
             SceneManager.Draw(spriteBatch);
+
+            debugComponent.Draw(spriteBatch, gameTime);
 
             spriteBatch.End();
 

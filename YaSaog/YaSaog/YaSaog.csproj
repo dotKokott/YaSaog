@@ -109,8 +109,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets.cs" />
+    <Compile Include="DebugComponent.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\BlowDryer.cs" />
     <Compile Include="Entities\Bubble.cs" />
+    <Compile Include="Entities\WindEmitter.cs" />
+    <Compile Include="Entities\WindParticle.cs" />
     <Compile Include="ExtendedSpriteBatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />

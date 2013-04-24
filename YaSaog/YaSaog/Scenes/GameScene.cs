@@ -10,7 +10,12 @@ namespace YaSaog.Scenes {
         public override void Init() {
             base.Init();
 
-            AddEntity(new Bubble(50, 50));
+            var bubble = new Bubble(300, 50);
+            var dryer = new BlowDryer();
+            dryer.Target = bubble;
+
+            AddEntity(bubble);
+            AddEntity(dryer);
         }
     }
 }
