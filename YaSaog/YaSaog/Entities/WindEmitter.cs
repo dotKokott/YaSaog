@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 
 namespace YaSaog.Entities {
     public class WindEmitter : BaseEntity {
@@ -17,7 +13,6 @@ namespace YaSaog.Entities {
 
         public WindEmitter(Vector2 size, int minParticlesPerEmit, int maxParticlesPerEmit)
             : base() {
-
                 MinParticlesPerEmit = minParticlesPerEmit;
                 MaxParticlesPerEmit = maxParticlesPerEmit;
 
@@ -25,8 +20,7 @@ namespace YaSaog.Entities {
                 Size = size;                
         }
 
-        public override void Init() {
-            
+        public override void Init() {            
         }
 
         public void Emit(float rotation) {
@@ -45,11 +39,10 @@ namespace YaSaog.Entities {
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
-            spriteBatch.Draw(spriteBatch.TextureWhite, BoundingBox, null, Color.Red, Rotation, new Vector2(spriteBatch.TextureWhite.Width / 2, spriteBatch.TextureWhite.Width / 2), SpriteEffects.None, 0);
+            //spriteBatch.Draw(spriteBatch.TextureWhite, BoundingBox, null, Color.Red, Rotation, new Vector2(spriteBatch.TextureWhite.Width / 2, spriteBatch.TextureWhite.Width / 2), SpriteEffects.None, 0);
         }
 
-        public override void Delete() {
-            
+        public override void Delete() {            
         }
     }
 }

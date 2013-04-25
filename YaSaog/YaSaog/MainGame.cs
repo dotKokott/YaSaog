@@ -74,7 +74,7 @@ namespace YaSaog {
 
             SceneManager.Draw(spriteBatch);
 
-            debugComponent.Draw(spriteBatch, gameTime);
+            //debugComponent.Draw(spriteBatch, gameTime);
 
             spriteBatch.End();
 

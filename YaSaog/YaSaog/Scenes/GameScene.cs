@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using YaSaog.Entities;
+﻿using YaSaog.Entities;
 
 namespace YaSaog.Scenes {
+
     public class GameScene : BaseScene {
 
         public override void Init() {
