@@ -17,7 +17,7 @@ namespace YaSaog.Entities {
             X = x;
             Y = y;
 
-            Size = new Vector2(75, 75);
+            Size = new Vector2(60, 60);
 
             Offset = new Vector2(-Size.X / 2,  -Size.Y / 2);
 
@@ -59,7 +59,7 @@ namespace YaSaog.Entities {
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
-            spriteBatch.Draw(Assets.BubbleBlue, new Rectangle((int)X, (int)Y, (int)Size.X, (int)Size.Y), null, Color.White, 0, new Vector2(Assets.BubbleBlue.Width / 2, Assets.BubbleBlue.Height / 2), SpriteEffects.None, 0);
+            spriteBatch.Draw(Assets.BubbleBlue, new Rectangle((int)X, (int)Y, (int)Size.X + 20, (int)Size.Y + 20), null, Color.White, 0, new Vector2(Assets.BubbleBlue.Width / 2, Assets.BubbleBlue.Height / 2), SpriteEffects.None, 0);
         }
 
         public override void Delete() {            

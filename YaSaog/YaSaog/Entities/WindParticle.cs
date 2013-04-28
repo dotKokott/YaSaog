@@ -22,7 +22,7 @@ namespace YaSaog.Entities {
                 Friction = 10f;
                 Speed = 700f;
 
-                Size = new Vector2(10, 10);
+                Size = new Vector2(10, 10);                
 
                 collidable = true;
                 CollisionType = "windparticle";
@@ -52,7 +52,7 @@ namespace YaSaog.Entities {
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
             var color = Color.White * ((1 / InitialVelocity.Length()) * Velocity.Length());
 
-            spriteBatch.Draw(Assets.BubbleBlue, BoundingBox, null, color, Rotation, new Vector2(Assets.BubbleBlue.Width / 2, Assets.BubbleBlue.Height / 2), SpriteEffects.None, 0);            
+            spriteBatch.Draw(Assets.BubbleBlue, BoundingBox, null, color, 0, Vector2.Zero, SpriteEffects.None, 0);            
         }
 
         public override void Delete() {
