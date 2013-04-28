@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace YaSaog {
 
@@ -13,14 +14,21 @@ namespace YaSaog {
         private float timeSinceLastDraw = 0.0f;                
         private float frameCount = 0;
 
+        public bool Enabled { get; set; }
+
         public DebugComponent(MainGame game) {
             Game = game;
         }
 
-        public void Update(GameTime gameTime) {            
+        public void Update(GameTime gameTime) {
+            if (Keyboard.GetState().IsKeyDown(Keys.F12))
+                Enabled = !Enabled;
         }
 
-        public void Draw(SpriteBatch spriteBatch, GameTime gameTime) {            
+        public void Draw(ExtendedSpriteBatch spriteBatch, GameTime gameTime) {
+            if (!Enabled)
+                return;
+
             float elapsed = (float)gameTime.ElapsedGameTime.TotalSeconds;
             frameCount++;
             timeSinceLastDraw += elapsed;
@@ -37,7 +45,7 @@ namespace YaSaog {
             spriteBatch.DrawString(Assets.SmallDebugFont, "Entities: " + Game.SceneManager.TopScreen.Entities.Count.ToString(), new Vector2(MainGame.Width - 150, 10), Color.Lime);
 
             foreach (var ent in Game.SceneManager.TopScreen.Entities.Where(ent => ent.collidable)) {
-                (spriteBatch as ExtendedSpriteBatch).DrawRectangle(ent.BoundingBox, Color.Red);
+                spriteBatch.DrawRectangle(ent.BoundingBox, Color.Red);
             }
         }
     }
