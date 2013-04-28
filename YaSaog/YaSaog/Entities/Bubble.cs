@@ -21,7 +21,6 @@ namespace YaSaog.Entities {
 
             Offset = new Vector2(-Size.X / 2,  -Size.Y / 2);
 
-
             velocity = new Vector2(0f, 50f);
             friction = new Vector2(0.2f, 0.2f);
 
@@ -40,9 +39,7 @@ namespace YaSaog.Entities {
             if (Keyboard.GetState().IsKeyDown(Keys.Up)) velocity += new Vector2(0, -2f);
             if (Keyboard.GetState().IsKeyDown(Keys.Down)) velocity += new Vector2(0, 2f);
 
-            var particles = GetCollidingEntities("windparticle");
-            //TODO: WTF TOARRAY
-            foreach (var part in particles.ToArray()) {
+            foreach (var part in GetCollidingEntities("windparticle")) {
                 Screen.RemoveEntity(part);
                 velocity += (part as WindParticle).Velocity / 100;
             }
@@ -53,9 +50,7 @@ namespace YaSaog.Entities {
             velocity = new Vector2(_x * Math.Sign(velocity.X), _y * Math.Sign(velocity.Y));
 
             X += velocity.X * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            Y += velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-           
+            Y += velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;           
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {

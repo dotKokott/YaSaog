@@ -43,7 +43,7 @@ namespace YaSaog.Entities {
         }
 
         public IEnumerable<BaseEntity> GetCollidingEntities(string type) {
-            return from ent in Screen.Entities where ent.collidable && ent.CollisionType == type && ent.BoundingBox.Intersects(BoundingBox) select ent;
+            return (from ent in Screen.Entities where ent.collidable && ent.CollisionType == type && ent.BoundingBox.Intersects(BoundingBox) select ent).ToArray();
         }
 
         public BaseEntity GetFirstCollidingEntity(string type) {
