@@ -19,7 +19,7 @@ namespace YaSaog.Entities {
         }
 
         public override void Init() {
-            windEmitter = new WindEmitter(new Vector2(10, 10), 10, 50);
+            windEmitter = new WindEmitter(10, 1, 3);
             Screen.AddEntity(windEmitter);
         }
 
@@ -35,13 +35,14 @@ namespace YaSaog.Entities {
                 var delta = Target.Position - Position;
                 rotation = -(float)Math.Atan2(delta.X, delta.Y) + MathHelper.ToRadians(95);
 
-                var windEmitterPosition = Position + new Vector2(50, -15);
+                var windEmitterPosition = Position + new Vector2(70, -10);
                 
                 var vec = windEmitterPosition - Position;
                 vec = Vector2.Transform(vec, Matrix.CreateRotationZ(rotation));
 
                 windEmitter.Position = Position + vec;
                 windEmitter.Rotation = rotation;
+
                 if (mouseState.LeftButton == ButtonState.Pressed) {
                     windEmitter.Emit(rotation);
                 }

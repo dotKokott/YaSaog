@@ -6,11 +6,12 @@ namespace YaSaog.Entities {
 
     public class WindParticle : BaseEntity {
 
-        public float Speed { get; set; }
-        public float Rotation { get; set; }
+        public float Speed { get; set; }        
         public float Friction { get; set; }
         public Vector2 InitialVelocity { get; private set; }
-        public Vector2 Velocity { get; private set; }       
+        public Vector2 Velocity { get; private set; }
+
+        public float Rotation { get; set; }
 
         public WindParticle(int x, int y, float rotation)
             : base() {
@@ -19,7 +20,7 @@ namespace YaSaog.Entities {
                 Y = y;
                 Rotation = rotation;
                 Friction = 10f;
-                Speed = 500f;
+                Speed = 700f;
 
                 Size = new Vector2(10, 10);
 

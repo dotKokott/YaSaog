@@ -7,17 +7,19 @@ namespace YaSaog.Entities {
         private Random random = new Random();
 
         public float Rotation { get; set; }
-        
+
+        public int Radius { get; set; }
         public int MinParticlesPerEmit { get; set; }
         public int MaxParticlesPerEmit { get; set; }        
 
-        public WindEmitter(Vector2 size, int minParticlesPerEmit, int maxParticlesPerEmit)
+        public WindEmitter(int radius, int minParticlesPerEmit, int maxParticlesPerEmit)
             : base() {
+
+                Radius = radius;            
                 MinParticlesPerEmit = minParticlesPerEmit;
                 MaxParticlesPerEmit = maxParticlesPerEmit;
 
-                collidable = false;
-                Size = size;                
+                collidable = false;                   
         }
 
         public override void Init() {            
@@ -25,10 +27,10 @@ namespace YaSaog.Entities {
 
         public void Emit(float rotation) {
             var count = random.Next(MinParticlesPerEmit, MaxParticlesPerEmit + 1);
-            count = 3;
+
             for (int i = 0; i < count; i++) {
-                var posX = X + (Size.X - random.Next(0, (int)(X + Size.X - X)));
-                var posY = Y + (Size.Y - random.Next(0, (int)(Y + Size.Y - Y)));
+                var posX = X - Radius + random.Next(0, (int)Radius * 2);
+                var posY = Y - Radius + random.Next(0, (int)Radius * 2);
 
                 Screen.AddEntity(new WindParticle((int)posX, (int)posY, rotation));
             }
@@ -38,8 +40,7 @@ namespace YaSaog.Entities {
             base.Update(gameTime);
         }
 
-        public override void Draw(ExtendedSpriteBatch spriteBatch) {
-            //spriteBatch.Draw(spriteBatch.TextureWhite, BoundingBox, null, Color.Red, Rotation, new Vector2(spriteBatch.TextureWhite.Width / 2, spriteBatch.TextureWhite.Width / 2), SpriteEffects.None, 0);
+        public override void Draw(ExtendedSpriteBatch spriteBatch) {            
         }
 
         public override void Delete() {            
