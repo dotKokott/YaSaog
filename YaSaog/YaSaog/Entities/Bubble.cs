@@ -17,7 +17,7 @@ namespace YaSaog.Entities {
             X = x;
             Y = y;
 
-            Size = new Vector2(60, 60);
+            Size = new Vector2(32, 32);
 
             Offset = new Vector2(-Size.X / 2,  -Size.Y / 2);
 
@@ -28,7 +28,11 @@ namespace YaSaog.Entities {
             CollisionType = "bubble";
         }
 
-        public override void Init() {        
+        public override void Init() {
+            var dryer = new BlowDryer();
+            dryer.Target = this;
+
+            Screen.AddEntity(dryer);
         }
 
         public override void Update(GameTime gameTime) {

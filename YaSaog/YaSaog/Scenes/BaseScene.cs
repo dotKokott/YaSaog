@@ -22,7 +22,9 @@ namespace YaSaog.Scenes {
             Inited = false;
         }
 
-        public void AddEntity(BaseEntity entity) {
+        public void AddEntity(BaseEntity entity) {            
+            if (entity == null) return;
+
             Entities.Add(entity);
             entity.Screen = this;
 

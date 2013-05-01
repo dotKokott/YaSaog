@@ -117,6 +117,8 @@
     <Compile Include="Entities\Collision\CircleCollider.cs" />
     <Compile Include="Entities\Collision\ColliderType.cs" />
     <Compile Include="Entities\Collision\RectangleCollider.cs" />
+    <Compile Include="Entities\EntityFactory.cs" />
+    <Compile Include="Entities\Level.cs" />
     <Compile Include="Entities\WindEmitter.cs" />
     <Compile Include="Entities\WindParticle.cs" />
     <Compile Include="ExtendedSpriteBatch.cs" />
@@ -126,6 +128,7 @@
     <Compile Include="Scenes\BaseScene.cs" />
     <Compile Include="Scenes\GameScene.cs" />
     <Compile Include="Scenes\SceneManager.cs" />
+    <Compile Include="Tiles\TileMap.cs" />
     <Compile Include="Utils\ActionLists\ActionList.cs" />
     <Compile Include="Utils\ActionLists\Actions\CallFunction.cs" />
     <Compile Include="Utils\ActionLists\Actions\WaitForSeconds.cs" />
@@ -169,7 +172,11 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Levels\TestLevel.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--
