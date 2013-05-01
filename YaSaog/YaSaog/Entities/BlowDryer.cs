@@ -12,8 +12,7 @@ namespace YaSaog.Entities {
 
         public BaseEntity Target { get; set; }
 
-        public BlowDryer()
-            : base() {
+        public BlowDryer() {
                 Size = new Vector2(Assets.HairDryer.Width / 2, Assets.HairDryer.Height / 2);
                 collidable = false;
         }

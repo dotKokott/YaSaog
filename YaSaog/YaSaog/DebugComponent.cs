@@ -42,9 +42,9 @@ namespace YaSaog {
             }
             
             spriteBatch.DrawString(Assets.SmallDebugFont, "FPS: " + fps.ToString(), new Vector2(MainGame.Width - 150, 0), Color.Lime);
-            spriteBatch.DrawString(Assets.SmallDebugFont, "Entities: " + Game.SceneManager.TopScreen.Entities.Count.ToString(), new Vector2(MainGame.Width - 150, 10), Color.Lime);
+            spriteBatch.DrawString(Assets.SmallDebugFont, "Entities: " + Game.SceneManager.TopScene.Entities.Count.ToString(), new Vector2(MainGame.Width - 150, 10), Color.Lime);
 
-            foreach (var ent in Game.SceneManager.TopScreen.Entities.Where(ent => ent.collidable)) {
+            foreach (var ent in Game.SceneManager.TopScene.Entities.Where(ent => ent.collidable)) {
                 spriteBatch.DrawRectangle(ent.BoundingBox, Color.Red);
             }
         }

@@ -13,9 +13,7 @@ namespace YaSaog.Entities {
 
         public float Rotation { get; set; }
 
-        public WindParticle(int x, int y, float rotation)
-            : base() {
-
+        public WindParticle(int x, int y, float rotation) {
                 X = x;
                 Y = y;
                 Rotation = rotation;

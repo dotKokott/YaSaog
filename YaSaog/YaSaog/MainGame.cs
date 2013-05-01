@@ -37,7 +37,7 @@ namespace YaSaog {
 
             debugComponent = new DebugComponent(this);
 
-            SceneManager.AddScreen(new GameScene());
+            SceneManager.AddScene(new GameScene());
         }
 
         protected override void LoadContent() {

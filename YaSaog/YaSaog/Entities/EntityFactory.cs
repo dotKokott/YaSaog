@@ -12,6 +12,10 @@ namespace YaSaog.Entities {
                     var bubble = new Bubble(x, y);
 
                     return bubble;
+                case "SolidSpike":
+                    var spike = new SolidSpike(x, y);
+
+                    return spike;
             }
 
             return null;

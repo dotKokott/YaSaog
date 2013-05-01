@@ -7,14 +7,14 @@ namespace YaSaog.Scenes {
 
     public class SceneManager {
 
-        private List<BaseScene> Screens = new List<BaseScene>();
+        private List<BaseScene> Scenes = new List<BaseScene>();
 
         public MainGame Game { get; private set; }
         public ActionList Actions = new ActionList();        
 
-        public BaseScene TopScreen {
+        public BaseScene TopScene {
             get {
-                return Screens.Last();
+                return Scenes.Last();
             }
         }        
 
@@ -22,31 +22,31 @@ namespace YaSaog.Scenes {
             Game = game;
         }
 
-        public void AddScreen(BaseScene screen) {
-            Screens.Add(screen);
-            screen.Manager = this;
+        public void AddScene(BaseScene scene) {
+            Scenes.Add(scene);
+            scene.Manager = this;
             
-            if (!screen.Inited)
-                screen.Init();            
+            if (!scene.Inited)
+                scene.Init();            
         }
 
-        public void RemoveScreen(BaseScene screen) {
-            Screens.Remove(screen);
+        public void RemoveScene(BaseScene scene) {
+            Scenes.Remove(scene);
         }
 
-        public void SwitchScreen(BaseScene screen) {
-            Screens.Clear();
-            AddScreen(screen);
+        public void SwitchScene(BaseScene scene) {
+            Scenes.Clear();
+            AddScene(scene);
         }
 
         public void Update(GameTime gameTime) {
             Actions.Update(gameTime);
-            Screens.Last().Update(gameTime);
+            Scenes.Last().Update(gameTime);
         }
 
         public void Draw(ExtendedSpriteBatch spriteBatch) {
-            foreach (var screen in Screens) {
-                screen.Draw(spriteBatch);
+            foreach (var scene in Scenes) {
+                scene.Draw(spriteBatch);
             }
         }        
     }

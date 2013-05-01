@@ -12,9 +12,7 @@ namespace YaSaog.Entities {
         public int MinParticlesPerEmit { get; set; }
         public int MaxParticlesPerEmit { get; set; }        
 
-        public WindEmitter(int radius, int minParticlesPerEmit, int maxParticlesPerEmit)
-            : base() {
-
+        public WindEmitter(int radius, int minParticlesPerEmit, int maxParticlesPerEmit) {
                 Radius = radius;            
                 MinParticlesPerEmit = minParticlesPerEmit;
                 MaxParticlesPerEmit = maxParticlesPerEmit;
