@@ -5,14 +5,14 @@ namespace YaSaog.Entities {
 
     public class Level : BaseEntity {
         
-        public XmlDocument File { get; private set; }        
+        public XmlDocument Document { get; private set; }        
 
-        public Level(XmlDocument file) {
-            File = file;
+        public Level(XmlDocument document) {
+            Document = document;
         }
 
         public override void Init() {
-            foreach (XmlElement element in File.SelectNodes("level/Entities")[0].ChildNodes) {
+            foreach (XmlElement element in Document.SelectNodes("level/Entities")[0].ChildNodes) {
                 Screen.AddEntity(EntityFactory.CreateFromElement(element));           
             }   
         }        
