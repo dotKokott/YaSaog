@@ -50,6 +50,9 @@ namespace YaSaog.Entities {
             return GetCollidingEntities(type).FirstOrDefault();
         }
 
+        //Empty constructor for EntityFactory reflection
+        public BaseEntity() { }
+
         public abstract void Init();
 
         public virtual void Update(GameTime gameTime) {

@@ -4,6 +4,8 @@ namespace YaSaog.Entities {
 
     public class SolidSpike : BaseEntity {
 
+        public SolidSpike() : this(0, 0) { }
+
         public SolidSpike(int posX, int posY) {
             X = posX;
             Y = posY;

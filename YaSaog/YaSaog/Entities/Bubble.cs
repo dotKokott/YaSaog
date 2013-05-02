@@ -10,6 +10,9 @@ namespace YaSaog.Entities {
         private Vector2 velocity { get; set; }
         private Vector2 friction { get; set; }
 
+        public Bubble() : this(0, 0) {            
+        }
+
         public Bubble(int x, int y) {           
             X = x;
             Y = y;
