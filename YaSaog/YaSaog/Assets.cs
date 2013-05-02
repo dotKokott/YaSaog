@@ -10,6 +10,7 @@ namespace YaSaog {
     public static class Assets {
 
         public static SpriteFont SmallDebugFont { get; set; }
+        public static SpriteFont UIFont { get; set; }
 
         public static Texture2D BubbleBlue { get; set; }
         public static Texture2D HairDryer { get; set; }
@@ -18,6 +19,7 @@ namespace YaSaog {
 
         public static void LoadContent(ContentManager content) {
             SmallDebugFont = content.Load<SpriteFont>("SmallDebugFont");
+            UIFont = content.Load<SpriteFont>("UIFont");
 
             BubbleBlue = content.Load<Texture2D>("Images/bubble_blue");
             HairDryer = content.Load<Texture2D>("Images/hair_dryer");

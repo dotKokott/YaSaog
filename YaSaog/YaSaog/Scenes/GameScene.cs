@@ -1,4 +1,5 @@
 ﻿using YaSaog.Entities;
+using Microsoft.Xna.Framework;
 
 namespace YaSaog.Scenes {
 
@@ -8,6 +9,10 @@ namespace YaSaog.Scenes {
             base.Init();
 
             AddEntity(new Level(Assets.TestLevel));
-        }        
+        }
+
+        public override void Draw(ExtendedSpriteBatch spriteBatch) {
+            base.Draw(spriteBatch);
+        }
     }
 }
