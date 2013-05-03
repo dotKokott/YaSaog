@@ -120,6 +120,7 @@
     <Compile Include="Entities\EntityFactory.cs" />
     <Compile Include="Entities\Level.cs" />
     <Compile Include="Entities\SolidSpike.cs" />
+    <Compile Include="Entities\Star.cs" />
     <Compile Include="Entities\WindEmitter.cs" />
     <Compile Include="Entities\WindParticle.cs" />
     <Compile Include="ExtendedSpriteBatch.cs" />

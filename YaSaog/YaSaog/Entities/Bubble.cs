@@ -55,6 +55,10 @@ namespace YaSaog.Entities {
             if (GetFirstCollidingEntity("spike") != null) {
                 Screen.Manager.SwitchScene(new GameScene());
             }
+
+            foreach (var star in GetCollidingEntities("star")) {
+                (star as Star).Collect();
+            }
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
