@@ -63,18 +63,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="font_numbers_red.png">
-      <Name>font_numbers_red</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="font_numbers_yellow.png">
-      <Name>font_numbers_yellow</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="UIFont.spritefont">
       <Name>UIFont</Name>
       <Importer>FontDescriptionImporter</Importer>
