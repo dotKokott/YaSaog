@@ -143,7 +143,6 @@
     <Compile Include="Scenes\BaseScene.cs" />
     <Compile Include="Scenes\GameScene.cs" />
     <Compile Include="Scenes\SceneManager.cs" />
-    <Compile Include="Tiles\TileMap.cs" />
     <Compile Include="Utils\ActionLists\ActionList.cs" />
     <Compile Include="Utils\ActionLists\Actions\CallFunction.cs" />
     <Compile Include="Utils\ActionLists\Actions\WaitForSeconds.cs" />
