@@ -153,6 +153,7 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
+    <Content Include="Levels\1.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YaSaogContent\YaSaogContent.contentproj">
@@ -191,6 +192,7 @@
     <None Include="Levels\TestLevel.oel">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="Levels\YaSaog.oep" />
     <None Include="Tweening\README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -4,7 +4,7 @@ using YaSaog.Utils;
 
 namespace YaSaog.Entities {
 
-    public class TweeningSpikes : BaseEntity {
+    public class TweeningSpike : BaseEntity {
 
         private Tweener tweenX { get; set; }
         private Tweener tweenY { get; set; }
@@ -15,8 +15,8 @@ namespace YaSaog.Entities {
         public int ToY { get; set; }
         public float Duration { get; set; }
 
-        public TweeningSpikes() : this(0, 0) { }
-        public TweeningSpikes(int posX, int posY) {
+        public TweeningSpike() : this(0, 0) { }
+        public TweeningSpike(int posX, int posY) {
             X = posX;
             Y = posY;
 

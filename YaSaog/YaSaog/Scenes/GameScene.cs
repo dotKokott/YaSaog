@@ -20,19 +20,6 @@ namespace YaSaog.Scenes {
 
             AddEntity(new Level(Assets.TestLevel));
 
-            AddEntity(new Star(100, 100));
-
-            AddEntity(new Star(700, 100));
-
-            AddEntity(new Star(700, 400));
-
-            var ts = new TweeningSpikes(MainGame.Width / 2, MainGame.Height / 2);
-            ts.TweenName = "Linear.EaseIn";
-            ts.ToX = 1000;
-            ts.Duration = 3f;
-
-            AddEntity(ts);
-
             InitialStarCount = StarCount;
 
             Time = 0f;

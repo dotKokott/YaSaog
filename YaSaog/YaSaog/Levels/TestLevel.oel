@@ -40,5 +40,12 @@
     <SolidSpike id="37" x="640" y="32" />
     <SolidSpike id="38" x="640" y="0" />
     <SolidSpike id="39" x="608" y="0" />
+    <TweeningSpike id="40" x="416" y="384" ToX="800" ToY="384" TweenName="Linear.EaseIn" Duration="2,5" />
+    <Star id="41" x="96" y="64" />
+    <Star id="42" x="640" y="448" />
+    <Star id="43" x="928" y="64" />
+    <TweeningSpike id="44" x="416" y="416" ToX="800" ToY="416" TweenName="Linear.EaseIn" Duration="2,5" />
+    <TweeningSpike id="45" x="800" y="512" ToX="416" ToY="512" TweenName="Linear.EaseIn" Duration="2,5" />
+    <TweeningSpike id="46" x="800" y="544" ToX="416" ToY="544" TweenName="Linear.EaseIn" Duration="2,5" />
   </Entities>
 </level>
