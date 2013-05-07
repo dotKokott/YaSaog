@@ -118,10 +118,11 @@
     <Compile Include="Entities\Collision\ColliderType.cs" />
     <Compile Include="Entities\Collision\RectangleCollider.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
+    <Compile Include="Entities\CirclingSpike.cs" />
     <Compile Include="Entities\Level.cs" />
     <Compile Include="Entities\SolidSpike.cs" />
     <Compile Include="Entities\Star.cs" />
-    <Compile Include="Entities\TweeningSpikes.cs" />
+    <Compile Include="Entities\TweeningSpike.cs" />
     <Compile Include="Entities\WindEmitter.cs" />
     <Compile Include="Entities\WindParticle.cs" />
     <Compile Include="ExtendedSpriteBatch.cs" />
