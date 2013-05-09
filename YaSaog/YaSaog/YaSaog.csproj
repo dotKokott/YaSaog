@@ -120,6 +120,7 @@
     <Compile Include="Entities\EntityFactory.cs" />
     <Compile Include="Entities\CirclingSpike.cs" />
     <Compile Include="Entities\Level.cs" />
+    <Compile Include="Entities\Menu\LevelButton.cs" />
     <Compile Include="Entities\Menu\MenuButton.cs" />
     <Compile Include="Entities\SolidSpike.cs" />
     <Compile Include="Entities\Star.cs" />
@@ -127,6 +128,7 @@
     <Compile Include="Entities\WindEmitter.cs" />
     <Compile Include="Entities\WindParticle.cs" />
     <Compile Include="ExtendedSpriteBatch.cs" />
+    <Compile Include="Scenes\LevelSelectionScene.cs" />
     <Compile Include="Scenes\MenuScene.cs" />
     <Compile Include="Tweening\Back.cs" />
     <Compile Include="Tweening\Bounce.cs" />
@@ -156,7 +158,9 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
-    <Content Include="Levels\1.png" />
+    <Content Include="Levels\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\YaSaogContent\YaSaogContent.contentproj">
@@ -192,10 +196,39 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Levels\TestLevel.oel">
+    <None Include="Levels\01.oel">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="Levels\YaSaog.oep" />
+    <None Include="Levels\02.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Levels\03.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Levels\04.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Levels\05.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Levels\06.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Levels\07.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Levels\08.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Levels\09.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Levels\10.oel">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Levels\YaSaog.oep">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Tweening\README.md" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

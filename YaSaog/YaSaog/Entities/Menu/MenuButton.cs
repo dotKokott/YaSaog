@@ -6,7 +6,7 @@ namespace YaSaog.Entities.Menu {
 
     public class MenuButton : BaseEntity {
 
-        private bool selected { get; set; }
+        public bool Selected { get; private set; }
 
         public Action OnClick { get; set; }
         public string Text { get; private set; }
@@ -20,7 +20,7 @@ namespace YaSaog.Entities.Menu {
 
             OnClick = onClick;
 
-            selected = false;
+            Selected = false;
 
             Collidable = true;
             CollisionType = "menubutton";
@@ -36,15 +36,15 @@ namespace YaSaog.Entities.Menu {
             var mouseState = Mouse.GetState();
             var mouseBox = new Rectangle(mouseState.X - 5, mouseState.Y - 5, 10, 10);
 
-            selected = this.BoundingBox.Intersects(mouseBox);
+            Selected = this.BoundingBox.Intersects(mouseBox);
 
-            if (selected && mouseState.LeftButton == ButtonState.Pressed) {
+            if (Selected && mouseState.LeftButton == ButtonState.Pressed) {
                 OnClick();
             }
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
-            var font = selected ? Assets.MenuSelected : Assets.MenuDefault;
+            var font = Selected ? Assets.MenuSelected : Assets.MenuDefault;
             spriteBatch.DrawString(font, Text, Position, Color.LimeGreen);
         }
 

@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
+using System.Xml;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System.Xml;
 
 namespace YaSaog {
     public static class Assets {
@@ -17,7 +16,7 @@ namespace YaSaog {
         public static Texture2D BubbleBlue { get; set; }
         public static Texture2D HairDryer { get; set; }
 
-        public static XmlDocument TestLevel { get; set; }
+        public static List<XmlDocument> Levels { get; set; }        
 
         public static void LoadContent(ContentManager content) {
             SmallDebug = content.Load<SpriteFont>("SmallDebugFont");
@@ -28,8 +27,13 @@ namespace YaSaog {
             BubbleBlue = content.Load<Texture2D>("Images/bubble_blue");
             HairDryer = content.Load<Texture2D>("Images/hair_dryer");
 
-            TestLevel = new XmlDocument();
-            TestLevel.Load("Levels/TestLevel.oel");
+            Levels = new List<XmlDocument>();
+            foreach (var file in Directory.GetFiles("Levels", "*.oel").OrderBy(f => f)) {
+                var level = new XmlDocument();
+                level.Load(file);
+
+                Levels.Add(level);
+            }
         }
     }
 }

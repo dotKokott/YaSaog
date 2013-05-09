@@ -2,6 +2,7 @@
 using YaSaog.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
+using System.Xml;
 
 namespace YaSaog.Scenes {
 
@@ -16,6 +17,14 @@ namespace YaSaog.Scenes {
 
         public float Time { get; private set; }
 
+        public XmlDocument Level { get; set; }
+
+        public GameScene(XmlDocument level)
+            : base() {
+
+                Level = level;
+        }
+
         public override void Init() {
             base.Init();
 
@@ -29,7 +38,7 @@ namespace YaSaog.Scenes {
                 AddEntity(new SolidSpike(MainGame.Width - 32, 32 * i));
             }
 
-            AddEntity(new Level(Assets.TestLevel));
+            AddEntity(new Level(Level));
 
             InitialStarCount = StarCount;
 

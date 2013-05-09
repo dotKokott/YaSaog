@@ -53,7 +53,8 @@ namespace YaSaog.Entities {
 
 
             if (GetFirstCollidingEntity("spike") != null) {
-                Screen.Manager.SwitchScene(new GameScene());
+                var level = (this.Screen as GameScene).Level;
+                Screen.Manager.SwitchScene(new GameScene(level));
             }
 
             foreach (var star in GetCollidingEntities("star")) {
