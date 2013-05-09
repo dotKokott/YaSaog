@@ -120,12 +120,14 @@
     <Compile Include="Entities\EntityFactory.cs" />
     <Compile Include="Entities\CirclingSpike.cs" />
     <Compile Include="Entities\Level.cs" />
+    <Compile Include="Entities\Menu\MenuButton.cs" />
     <Compile Include="Entities\SolidSpike.cs" />
     <Compile Include="Entities\Star.cs" />
     <Compile Include="Entities\TweeningSpike.cs" />
     <Compile Include="Entities\WindEmitter.cs" />
     <Compile Include="Entities\WindParticle.cs" />
     <Compile Include="ExtendedSpriteBatch.cs" />
+    <Compile Include="Scenes\MenuScene.cs" />
     <Compile Include="Tweening\Back.cs" />
     <Compile Include="Tweening\Bounce.cs" />
     <Compile Include="Tweening\Circular.cs" />

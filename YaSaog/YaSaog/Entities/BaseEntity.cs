@@ -18,7 +18,7 @@ namespace YaSaog.Entities {
 
         public BaseScene Screen { get; set; }
 
-        public bool collidable = true;
+        public bool Collidable = true;
         public string CollisionType { get; set; }
 
         public int ZDepth = 1;
@@ -43,7 +43,7 @@ namespace YaSaog.Entities {
         }
 
         public IEnumerable<BaseEntity> GetCollidingEntities(string type) {
-            return (from ent in Screen.Entities where ent.collidable && ent.CollisionType == type && ent.BoundingBox.Intersects(BoundingBox) select ent).ToArray();
+            return (from ent in Screen.Entities where ent.Collidable && ent.CollisionType == type && ent.BoundingBox.Intersects(BoundingBox) select ent).ToArray();
         }
 
         public BaseEntity GetFirstCollidingEntity(string type) {

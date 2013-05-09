@@ -14,7 +14,7 @@ namespace YaSaog.Entities {
 
         public BlowDryer() {
             Size = new Vector2(Assets.HairDryer.Width / 2, Assets.HairDryer.Height / 2);
-            collidable = false;
+            Collidable = false;
 
             ZDepth = 1000;
         }

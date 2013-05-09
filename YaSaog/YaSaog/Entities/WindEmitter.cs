@@ -17,7 +17,7 @@ namespace YaSaog.Entities {
                 MinParticlesPerEmit = minParticlesPerEmit;
                 MaxParticlesPerEmit = maxParticlesPerEmit;
 
-                collidable = false;                   
+                Collidable = false;                   
         }
 
         public override void Init() {            

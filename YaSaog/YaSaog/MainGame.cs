@@ -37,7 +37,7 @@ namespace YaSaog {
 
             debugComponent = new DebugComponent(this);
 
-            SceneManager.AddScene(new GameScene());
+            SceneManager.AddScene(new MenuScene());
         }
 
         protected override void LoadContent() {
@@ -57,9 +57,6 @@ namespace YaSaog {
         }
 
         protected override void Update(GameTime gameTime) {
-            if (Keyboard.GetState().IsKeyDown(Keys.Escape))
-                this.Exit();
-
             SceneManager.Update(gameTime);
 
             debugComponent.Update(gameTime);

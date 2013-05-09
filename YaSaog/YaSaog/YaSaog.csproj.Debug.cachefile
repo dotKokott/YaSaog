@@ -2,4 +2,6 @@ Content\Images\bubble_blue.xnb
 Content\Images\hair_dryer.xnb
 Content\SmallDebugFont.xnb
 Content\UIFont.xnb
+Content\MenuDefaultFont.xnb
+Content\MenuSelectedFont.xnb
 Levels\TestLevel.oel

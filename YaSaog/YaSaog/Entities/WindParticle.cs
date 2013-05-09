@@ -22,7 +22,7 @@ namespace YaSaog.Entities {
 
                 Size = new Vector2(10, 10);                
 
-                collidable = true;
+                Collidable = true;
                 CollisionType = "windparticle";
         }
 

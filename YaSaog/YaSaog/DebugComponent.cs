@@ -41,10 +41,10 @@ namespace YaSaog {
                 timeSinceLastDraw -= updateInterval;
             }
             
-            spriteBatch.DrawString(Assets.SmallDebugFont, "FPS: " + fps.ToString(), new Vector2(MainGame.Width - 150, 0), Color.Lime);
-            spriteBatch.DrawString(Assets.SmallDebugFont, "Entities: " + Game.SceneManager.TopScene.Entities.Count.ToString(), new Vector2(MainGame.Width - 150, 10), Color.Lime);
+            spriteBatch.DrawString(Assets.SmallDebug, "FPS: " + fps.ToString(), new Vector2(MainGame.Width - 150, 0), Color.Lime);
+            spriteBatch.DrawString(Assets.SmallDebug, "Entities: " + Game.SceneManager.TopScene.Entities.Count.ToString(), new Vector2(MainGame.Width - 150, 10), Color.Lime);
 
-            foreach (var ent in Game.SceneManager.TopScene.Entities.Where(ent => ent.collidable)) {
+            foreach (var ent in Game.SceneManager.TopScene.Entities.Where(ent => ent.Collidable)) {
                 spriteBatch.DrawRectangle(ent.BoundingBox, Color.Red);
             }
         }

@@ -24,7 +24,7 @@ namespace YaSaog.Entities {
             velocity = new Vector2(0f, 50f);
             friction = new Vector2(0.2f, 0.2f);
 
-            collidable = true;
+            Collidable = true;
             CollisionType = "bubble";
         }
 

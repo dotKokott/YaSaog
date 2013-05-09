@@ -22,7 +22,7 @@ namespace YaSaog.Entities {
 
             Size = new Vector2(32, 32);
 
-            collidable = true;
+            Collidable = true;
             CollisionType = "spike";
 
             TweenName = "Linear.EaseIn";
