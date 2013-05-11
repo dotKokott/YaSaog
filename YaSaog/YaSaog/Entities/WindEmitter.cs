@@ -30,7 +30,7 @@ namespace YaSaog.Entities {
                 var posX = X - Radius + random.Next(0, (int)Radius * 2);
                 var posY = Y - Radius + random.Next(0, (int)Radius * 2);
 
-                Screen.AddEntity(new WindParticle((int)posX, (int)posY, rotation));
+                Scene.AddEntity(new WindParticle((int)posX, (int)posY, rotation));
             }
         }
 

@@ -119,7 +119,9 @@
     <Compile Include="Entities\Collision\RectangleCollider.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
     <Compile Include="Entities\CirclingSpike.cs" />
+    <Compile Include="Entities\Finish.cs" />
     <Compile Include="Entities\Level.cs" />
+    <Compile Include="Entities\LevelSummary.cs" />
     <Compile Include="Entities\Menu\LevelButton.cs" />
     <Compile Include="Entities\Menu\MenuButton.cs" />
     <Compile Include="Entities\SolidSpike.cs" />
@@ -128,6 +130,7 @@
     <Compile Include="Entities\WindEmitter.cs" />
     <Compile Include="Entities\WindParticle.cs" />
     <Compile Include="ExtendedSpriteBatch.cs" />
+    <Compile Include="Scenes\LevelFinishScene.cs" />
     <Compile Include="Scenes\LevelSelectionScene.cs" />
     <Compile Include="Scenes\MenuScene.cs" />
     <Compile Include="Tweening\Back.cs" />
@@ -150,6 +153,7 @@
     <Compile Include="Scenes\SceneManager.cs" />
     <Compile Include="Utils\ActionLists\ActionList.cs" />
     <Compile Include="Utils\ActionLists\Actions\CallFunction.cs" />
+    <Compile Include="Utils\ActionLists\Actions\TweenPositionTo.cs" />
     <Compile Include="Utils\ActionLists\Actions\WaitForSeconds.cs" />
     <Compile Include="Utils\ActionLists\IAction.cs" />
     <Compile Include="Utils\Coroutines\Coroutines.cs" />

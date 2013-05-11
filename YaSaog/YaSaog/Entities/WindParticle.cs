@@ -43,7 +43,7 @@ namespace YaSaog.Entities {
             Y += Velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;            
 
             if (Velocity.X == 0 && Velocity.Y == 0) {
-                Screen.RemoveEntity(this);
+                Scene.RemoveEntity(this);
             }
         }
 

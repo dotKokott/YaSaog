@@ -21,7 +21,7 @@ namespace YaSaog.Entities {
 
         public override void Init() {
             windEmitter = new WindEmitter(10, 1, 3);
-            Screen.AddEntity(windEmitter);
+            Scene.AddEntity(windEmitter);
         }
 
         public override void Update(GameTime gameTime) {
@@ -55,7 +55,7 @@ namespace YaSaog.Entities {
         }
 
         public override void Delete() {
-            Screen.RemoveEntity(windEmitter);
+            Scene.RemoveEntity(windEmitter);
         }
     }
 }

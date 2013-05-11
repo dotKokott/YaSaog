@@ -20,7 +20,7 @@ namespace YaSaog.Entities {
         }
 
         public void Collect() {
-            Screen.RemoveEntity(this);
+            Scene.RemoveEntity(this);
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {

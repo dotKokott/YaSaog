@@ -15,14 +15,21 @@ namespace YaSaog.Scenes {
             }
         }
 
+        public int CollectedStarCount {
+            get {
+                return InitialStarCount - StarCount;
+            }
+        }
+
+
         public float Time { get; private set; }
 
-        public XmlDocument Level { get; set; }
+        public Level CurrentLevel { get; set; }
 
-        public GameScene(XmlDocument level)
+        public GameScene(Level level)
             : base() {
 
-                Level = level;
+                CurrentLevel = level;
         }
 
         public override void Init() {
@@ -38,7 +45,7 @@ namespace YaSaog.Scenes {
                 AddEntity(new SolidSpike(MainGame.Width - 32, 32 * i));
             }
 
-            AddEntity(new Level(Level));
+            AddEntity(CurrentLevel);
 
             InitialStarCount = StarCount;
 
@@ -58,7 +65,7 @@ namespace YaSaog.Scenes {
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
             base.Draw(spriteBatch);
 
-            spriteBatch.DrawString(Assets.UI, string.Format("{0} / {1} Stars", (InitialStarCount - StarCount).ToString(), InitialStarCount.ToString()), new Vector2(1000, 10), Color.Yellow);
+            spriteBatch.DrawString(Assets.UI, string.Format("{0} / {1} Stars", CollectedStarCount.ToString(), InitialStarCount.ToString()), new Vector2(1000, 10), Color.Yellow);
 
             spriteBatch.DrawString(Assets.UI, ((int)Time).ToString("000 s"), new Vector2(800, 10), Color.Yellow);
         }

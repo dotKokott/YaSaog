@@ -13,7 +13,7 @@ namespace YaSaog.Entities {
 
         public override void Init() {
             foreach (XmlElement element in Document.SelectNodes("level/Entities")[0].ChildNodes) {
-                Screen.AddEntity(EntityFactory.CreateFromElement(element));           
+                Scene.AddEntity(EntityFactory.CreateFromElement(element));           
             }   
         }        
 

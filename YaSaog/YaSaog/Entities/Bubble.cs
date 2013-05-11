@@ -32,14 +32,14 @@ namespace YaSaog.Entities {
             var dryer = new BlowDryer();
             dryer.Target = this;
 
-            Screen.AddEntity(dryer);
+            Scene.AddEntity(dryer);
         }
 
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
             
             foreach (var part in GetCollidingEntities("windparticle")) {
-                Screen.RemoveEntity(part);
+                Scene.RemoveEntity(part);
                 velocity += (part as WindParticle).Velocity / 100;
             }
 
@@ -53,12 +53,17 @@ namespace YaSaog.Entities {
 
 
             if (GetFirstCollidingEntity("spike") != null) {
-                var level = (this.Screen as GameScene).Level;
-                Screen.Manager.SwitchScene(new GameScene(level));
+                var level = (this.Scene as GameScene).CurrentLevel;
+                Scene.Manager.SwitchScene(new GameScene(level));
             }
 
             foreach (var star in GetCollidingEntities("star")) {
                 (star as Star).Collect();
+            }
+
+            if (GetFirstCollidingEntity("finish") != null) {
+                var scene = (GameScene)this.Scene;
+                this.Scene.Manager.AddScene(new LevelFinishScene(scene));
             }
         }
 

@@ -26,7 +26,7 @@ namespace YaSaog.Scenes {
             if (entity == null) return;
 
             Entities.Add(entity);
-            entity.Screen = this;
+            entity.Scene = this;
 
             entity.Init();
         }
