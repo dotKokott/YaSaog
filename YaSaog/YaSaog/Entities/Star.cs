@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using YaSaog.Tweening;
+using YaSaog.Utils.ActionLists.Actions;
 
 namespace YaSaog.Entities {
 
@@ -21,7 +23,9 @@ namespace YaSaog.Entities {
 
         public void Collect() {
             Assets.StarCollect.Play();
-            Scene.RemoveEntity(this);
+            Collidable = false;
+            Actions.AddAction(new TweenPositionTo(this, new Vector2(30, 10), 0.5f, Linear.EaseIn), true);
+            Actions.AddAction(new CallFunction(() => { Scene.RemoveEntity(this); }), true);
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {

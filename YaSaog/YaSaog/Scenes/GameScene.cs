@@ -1,9 +1,7 @@
 ﻿using System.Linq;
-using YaSaog.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
-using System.Xml;
-using Microsoft.Xna.Framework.Media;
+using YaSaog.Entities;
 
 namespace YaSaog.Scenes {
 
@@ -59,17 +57,30 @@ namespace YaSaog.Scenes {
 
             Time += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Escape)) {
+            var state = Keyboard.GetState();
+
+            if (state.IsKeyDown(Keys.Escape)) {
                 this.Manager.SwitchScene(new MenuScene());
+            }
+
+            if (state.IsKeyDown(Keys.R)) {
+                this.Manager.SwitchScene(new GameScene(this.CurrentLevel));
             }
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
             base.Draw(spriteBatch);
 
-            spriteBatch.DrawString(Assets.UI, string.Format("{0} / {1} Stars", CollectedStarCount.ToString(), InitialStarCount.ToString()), new Vector2(1000, 10), Color.Yellow);
+            for (int i = 0; i < InitialStarCount; i++) {
+                var pos = new Vector2(30 + (i * 32), 10);
+                var color = Color.Gray;
 
-            spriteBatch.DrawString(Assets.UI, ((int)Time).ToString("000 s"), new Vector2(800, 10), Color.Yellow);
+                if (i < CollectedStarCount) {
+                    color = Color.Green;
+                }
+
+                spriteBatch.Draw(Assets.BubbleBlue, new Rectangle((int)pos.X, (int)pos.Y, 32, 32), color);
+            }            
         }
     }
 }
