@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using YaSaog.Entities.Menu;
 using YaSaog.Scenes;
-using System.Linq;
 
 namespace YaSaog.Entities {
 

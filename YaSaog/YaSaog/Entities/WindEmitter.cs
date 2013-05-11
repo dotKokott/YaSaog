@@ -34,10 +34,6 @@ namespace YaSaog.Entities {
             }
         }
 
-        public override void Update(GameTime gameTime) {
-            base.Update(gameTime);
-        }
-
         public override void Draw(ExtendedSpriteBatch spriteBatch) {            
         }
 

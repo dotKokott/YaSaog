@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using YaSaog.Scenes;
-using YaSaog.Scores;
 
 namespace YaSaog.Entities {
 
