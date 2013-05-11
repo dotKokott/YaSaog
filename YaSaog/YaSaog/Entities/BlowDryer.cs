@@ -14,8 +14,6 @@ namespace YaSaog.Entities {
         private float rotation = 0f;
         private WindEmitter windEmitter { get; set; }
 
-        private MouseState mouseState { get; set; }
-
         public BlowDryer() {
             Size = new Vector2(Assets.HairDryer.Width / 2, Assets.HairDryer.Height / 2);
             Collidable = false;
@@ -31,8 +29,8 @@ namespace YaSaog.Entities {
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
 
-            var _mouseState = mouseState;
-            mouseState = Mouse.GetState();
+            var _mouseState = Scene.Manager.OldMouseState;
+            var mouseState = Scene.Manager.NewMouseState;
 
             if (_mouseState.LeftButton == ButtonState.Released && mouseState.LeftButton == ButtonState.Pressed) {
                 Assets.DryerOn.Play();

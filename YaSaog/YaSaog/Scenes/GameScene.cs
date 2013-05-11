@@ -57,7 +57,8 @@ namespace YaSaog.Scenes {
 
             Time += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-            var state = Keyboard.GetState();
+            var oldState = Manager.OldKeyboardState;
+            var state = Manager.NewKeyboardState;
 
             if (state.IsKeyDown(Keys.Escape)) {
                 this.Manager.SwitchScene(new MenuScene());
@@ -65,6 +66,10 @@ namespace YaSaog.Scenes {
 
             if (state.IsKeyDown(Keys.R)) {
                 this.Manager.SwitchScene(new GameScene(this.CurrentLevel));
+            }
+
+            if (!oldState.IsKeyDown(Keys.P) && state.IsKeyDown(Keys.P)) {
+                this.Manager.AddScene(new PauseScene());
             }
         }
 

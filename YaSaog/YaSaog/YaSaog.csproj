@@ -130,6 +130,8 @@
     <Compile Include="Entities\WindEmitter.cs" />
     <Compile Include="Entities\WindParticle.cs" />
     <Compile Include="ExtendedSpriteBatch.cs" />
+    <Compile Include="Scenes\CreditsScene.cs" />
+    <Compile Include="Scenes\PauseScene.cs" />
     <Compile Include="Scenes\LevelFinishScene.cs" />
     <Compile Include="Scenes\LevelSelectionScene.cs" />
     <Compile Include="Scenes\MenuScene.cs" />

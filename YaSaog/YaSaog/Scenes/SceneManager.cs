@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using YaSaog.Utils.ActionLists;
 using Microsoft.Xna.Framework.Media;
 using YaSaog.Utils.ActionLists.Actions;
+using Microsoft.Xna.Framework.Input;
 
 namespace YaSaog.Scenes {
 
@@ -12,7 +13,13 @@ namespace YaSaog.Scenes {
         private List<BaseScene> Scenes = new List<BaseScene>();
 
         public MainGame Game { get; private set; }
-        public ActionList Actions = new ActionList();        
+        public ActionList Actions = new ActionList();
+
+        public KeyboardState OldKeyboardState;
+        public KeyboardState NewKeyboardState;
+
+        public MouseState OldMouseState;
+        public MouseState NewMouseState;
 
         public BaseScene TopScene {
             get {
@@ -46,6 +53,12 @@ namespace YaSaog.Scenes {
         }
 
         public void Update(GameTime gameTime) {
+            OldKeyboardState = NewKeyboardState;
+            NewKeyboardState = Keyboard.GetState();
+
+            OldMouseState = NewMouseState;
+            NewMouseState = Mouse.GetState();
+
             Actions.Update(gameTime);
             Scenes.Last().Update(gameTime);
         }

@@ -20,6 +20,9 @@ namespace YaSaog.Scenes {
             var play = new MenuButton(0, 0, "Play", () => { Manager.SwitchScene(new LevelSelectionScene()); });
             mainMenu.Add(play);
 
+            var credits = new MenuButton(0, 0, "Credits", () => { Manager.SwitchScene(new CreditsScene()); });
+            mainMenu.Add(credits);
+
             var exit = new MenuButton(0, 0, "Exit", () => { Manager.Game.Exit(); });
             mainMenu.Add(exit);
 
