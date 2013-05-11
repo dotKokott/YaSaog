@@ -4,10 +4,12 @@ using System.Collections.Generic;
 namespace YaSaog.Entities {
 
     public class Level : BaseEntity {
-        
+
+        public string File { get; private set; }
         public XmlDocument Document { get; private set; }        
 
-        public Level(XmlDocument document) {
+        public Level(string file, XmlDocument document) {
+            File = file;
             Document = document;
         }
 

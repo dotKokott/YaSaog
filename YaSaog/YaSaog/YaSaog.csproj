@@ -133,6 +133,7 @@
     <Compile Include="Scenes\LevelFinishScene.cs" />
     <Compile Include="Scenes\LevelSelectionScene.cs" />
     <Compile Include="Scenes\MenuScene.cs" />
+    <Compile Include="Scores\Score.cs" />
     <Compile Include="Tweening\Back.cs" />
     <Compile Include="Tweening\Bounce.cs" />
     <Compile Include="Tweening\Circular.cs" />

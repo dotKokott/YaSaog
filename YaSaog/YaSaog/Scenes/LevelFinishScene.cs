@@ -2,6 +2,8 @@
 using YaSaog.Entities;
 using YaSaog.Tweening;
 using YaSaog.Utils.ActionLists.Actions;
+using YaSaog.Scores;
+using System.Linq;
 
 namespace YaSaog.Scenes {
 
@@ -15,7 +17,23 @@ namespace YaSaog.Scenes {
 
         public override void Init() {
             base.Init();
-                       
+
+            var oldScore = Score.LoadFromFile(CurrentScene.CurrentLevel.File);
+            var newScore = new Score(CurrentScene.CurrentLevel.File, CurrentScene.Time, CurrentScene.CollectedStarCount);
+
+            bool saveScore = false;
+            if (oldScore == null) {
+                saveScore = true;
+            } else {
+                if (oldScore.StarCount < newScore.StarCount) {
+                    saveScore = true;
+                } else if (oldScore.StarCount == newScore.StarCount && oldScore.Time > newScore.Time) {
+                    saveScore = true;
+                }
+            }
+
+            if (saveScore) newScore.Save();
+
             var summary = new LevelSummary((int)((MainGame.Width / 2) - LevelSummary.StaticSize.X / 2), MainGame.Height, CurrentScene);
             summary.Actions.AddAction(new TweenPositionTo(summary, new Vector2(summary.X, (MainGame.Height / 2) - LevelSummary.StaticSize.Y / 2), 2f, Back.EaseOut), true);
 

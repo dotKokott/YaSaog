@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using YaSaog.Entities.Menu;
 using YaSaog.Scenes;
+using System.Linq;
 
 namespace YaSaog.Entities {
 
@@ -24,19 +25,19 @@ namespace YaSaog.Entities {
         }
 
         public override void Init() {
-            replay = new MenuButton((int)X + 50, (int)(Y + StaticSize.Y - 50), "Replay", () => { Scene.Manager.SwitchScene(new GameScene(GameScene.CurrentLevel)); });
+            replay = new MenuButton(0, 0, "Replay", () => { Scene.Manager.SwitchScene(new GameScene(GameScene.CurrentLevel)); });
             Scene.AddEntity(replay);
 
-            var lvlIndex = Assets.Levels.IndexOf(GameScene.CurrentLevel.Document);
+            var lvlIndex = Assets.Levels.IndexOf(GameScene.CurrentLevel);
             BaseScene nextScene = new LevelSelectionScene();
             if (lvlIndex + 1 < Assets.Levels.Count) {
-                nextScene = new GameScene(new Level(Assets.Levels[lvlIndex + 1]));
+                nextScene = new GameScene(Assets.Levels[lvlIndex + 1]);
             }
 
-            next = new MenuButton((int)X + 250, (int)(Y + StaticSize.Y - 50), "Next", () => { Scene.Manager.SwitchScene(nextScene); });
+            next = new MenuButton(0, 0, "Next", () => { Scene.Manager.SwitchScene(nextScene); });
             Scene.AddEntity(next);
 
-            menu = new MenuButton((int)X + 175, (int)(Y + StaticSize.Y - 25), "Menu", () => { Scene.Manager.SwitchScene(new MenuScene()); });
+            menu = new MenuButton(0, 0, "Menu", () => { Scene.Manager.SwitchScene(new MenuScene()); });
             Scene.AddEntity(menu);
         }
 

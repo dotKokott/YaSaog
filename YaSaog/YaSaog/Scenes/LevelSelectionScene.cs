@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using YaSaog.Entities;
 using YaSaog.Entities.Menu;
+using System.Linq;
 
 namespace YaSaog.Scenes {
 
@@ -17,7 +18,7 @@ namespace YaSaog.Scenes {
             for (int i = 0; i < Assets.Levels.Count; i++) {
                 var level = Assets.Levels[i];
 
-                var lvlButton = new LevelButton(0, 0, (i + 1).ToString(), () => { Manager.SwitchScene(new GameScene(new Level(level))); });
+                var lvlButton = new LevelButton(0, 0, (i + 1).ToString(), () => { Manager.SwitchScene(new GameScene(level)); });
 
                 posX += (int)lvlButton.Size.X + 100;
                 if (i % 5 == 0) {
