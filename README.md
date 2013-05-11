@@ -6,10 +6,15 @@ Bubble themed game for my admission assignment
 Controls
 =======
 Mouse		-> Move blow dryer
+
 Left Click 	-> Blow
+
 P 			-> Pause
+
 R 			-> Restart level
+
 Escape		-> Back to Menu
+
 
 F12			-> Debug overlay
 
