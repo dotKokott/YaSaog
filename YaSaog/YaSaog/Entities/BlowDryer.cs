@@ -2,15 +2,19 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
+using System.Diagnostics;
 
 namespace YaSaog.Entities {
 
     public class BlowDryer : BaseEntity {
 
+        public BaseEntity Target { get; set; }
+
         private float rotation = 0f;
         private WindEmitter windEmitter { get; set; }
 
-        public BaseEntity Target { get; set; }
+        private MouseState mouseState { get; set; }
 
         public BlowDryer() {
             Size = new Vector2(Assets.HairDryer.Width / 2, Assets.HairDryer.Height / 2);
@@ -27,7 +31,22 @@ namespace YaSaog.Entities {
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
 
-            var mouseState = Mouse.GetState();
+            var _mouseState = mouseState;
+            mouseState = Mouse.GetState();
+
+            if (_mouseState.LeftButton == ButtonState.Released && mouseState.LeftButton == ButtonState.Pressed) {
+                Assets.DryerOn.Play();
+            }
+
+            if (_mouseState.LeftButton == ButtonState.Pressed && mouseState.LeftButton == ButtonState.Released) {
+                Assets.DryerOn.Stop();
+                Assets.DryerDry.Stop();
+                Assets.DryerOff.Play();
+            }
+
+            if (mouseState.LeftButton == ButtonState.Pressed && Assets.DryerOn.State == SoundState.Stopped && Assets.DryerDry.State != SoundState.Playing) {
+                Assets.DryerDry.Play();
+            }                        
 
             X = mouseState.X;
             Y = mouseState.Y;            

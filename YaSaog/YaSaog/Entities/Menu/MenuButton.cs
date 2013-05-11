@@ -35,10 +35,13 @@ namespace YaSaog.Entities.Menu {
 
             var mouseState = Mouse.GetState();
             var mouseBox = new Rectangle(mouseState.X - 5, mouseState.Y - 5, 10, 10);
-
+            var _selected = Selected;
             Selected = this.BoundingBox.Intersects(mouseBox);
 
+            if (!_selected && Selected) Assets.MenuHover.Play();            
+
             if (Selected && mouseState.LeftButton == ButtonState.Pressed) {
+                Assets.MenuClick.Play();
                 OnClick();
             }
         }

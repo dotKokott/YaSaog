@@ -3,6 +3,7 @@ using YaSaog.Entities;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using System.Xml;
+using Microsoft.Xna.Framework.Media;
 
 namespace YaSaog.Scenes {
 
@@ -21,7 +22,6 @@ namespace YaSaog.Scenes {
             }
         }
 
-
         public float Time { get; private set; }
 
         public Level CurrentLevel { get; set; }
@@ -34,6 +34,8 @@ namespace YaSaog.Scenes {
 
         public override void Init() {
             base.Init();
+
+            Manager.FadeInSong(Assets.Ingame, true, 0.2f);
 
             for (int i = 0; i < MainGame.Width / 32; i++) {
                 AddEntity(new SolidSpike(32 * i, 0));

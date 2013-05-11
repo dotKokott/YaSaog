@@ -47,6 +47,7 @@
     <Bubble id="0" x="192" y="384" />
     <Star id="41" x="416" y="576" />
     <CirclingSpike id="47" x="928" y="96" TweenName="Linear.EaseIn" ToDegrees="360" Modifier="1" Duration="3" Radius="100" ReverseOnFinish="False" />
-    <Finish id="1" x="192" y="608" />
+    <Finish id="1" x="1120" y="672" />
+    <CirclingSpike id="48" x="1120" y="640" TweenName="Back.EaseOut" ToDegrees="360" Modifier="1" Duration="3" Radius="25" ReverseOnFinish="True" />
   </Entities>
 </level>

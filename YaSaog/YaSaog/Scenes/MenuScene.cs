@@ -2,6 +2,7 @@
 using System.Linq;
 using Microsoft.Xna.Framework;
 using YaSaog.Entities.Menu;
+using Microsoft.Xna.Framework.Media;
 
 namespace YaSaog.Scenes {
 
@@ -9,6 +10,8 @@ namespace YaSaog.Scenes {
 
         public override void Init() {
             base.Init();
+
+            Manager.FadeInSong(Assets.Menu, true, 0.5f);
 
             Manager.Game.IsMouseVisible = true;
 

@@ -20,6 +20,7 @@ namespace YaSaog.Entities {
         }
 
         public void Collect() {
+            Assets.StarCollect.Play();
             Scene.RemoveEntity(this);
         }
 

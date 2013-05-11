@@ -54,6 +54,9 @@ namespace YaSaog.Entities {
 
 
             if (GetFirstCollidingEntity("spike") != null) {
+                Assets.DryerDry.Stop();
+                Assets.BubblePop.Play();
+
                 var level = (this.Scene as GameScene).CurrentLevel;
                 Scene.Manager.SwitchScene(new GameScene(level));
             }
@@ -63,6 +66,9 @@ namespace YaSaog.Entities {
             }
 
             if (GetFirstCollidingEntity("finish") != null) {
+                Assets.DryerDry.Stop();
+                Assets.Finish.Play();
+
                 var scene = (GameScene)this.Scene;
                 this.Scene.Manager.AddScene(new LevelFinishScene(scene));
             }

@@ -2,6 +2,8 @@
 using System.Linq;
 using Microsoft.Xna.Framework;
 using YaSaog.Utils.ActionLists;
+using Microsoft.Xna.Framework.Media;
+using YaSaog.Utils.ActionLists.Actions;
 
 namespace YaSaog.Scenes {
 
@@ -37,6 +39,10 @@ namespace YaSaog.Scenes {
         public void SwitchScene(BaseScene scene) {
             Scenes.Clear();
             AddScene(scene);
+        }
+
+        public void FadeInSong(Song song, bool repeat, float maxVolume) {
+            Actions.AddAction(new FadeInSong(song, repeat, maxVolume), true);
         }
 
         public void Update(GameTime gameTime) {

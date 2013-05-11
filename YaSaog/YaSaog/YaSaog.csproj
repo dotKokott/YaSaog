@@ -45,7 +45,7 @@
     <NoStdLib>true</NoStdLib>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <PlatformTarget>x86</PlatformTarget>
-    <XnaCompressContent>False</XnaCompressContent>
+    <XnaCompressContent>True</XnaCompressContent>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -154,6 +154,7 @@
     <Compile Include="Scenes\SceneManager.cs" />
     <Compile Include="Utils\ActionLists\ActionList.cs" />
     <Compile Include="Utils\ActionLists\Actions\CallFunction.cs" />
+    <Compile Include="Utils\ActionLists\Actions\FadeInSong.cs" />
     <Compile Include="Utils\ActionLists\Actions\TweenPositionTo.cs" />
     <Compile Include="Utils\ActionLists\Actions\WaitForSeconds.cs" />
     <Compile Include="Utils\ActionLists\IAction.cs" />
