@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Graphics;
+using YaSaog.Scores;
 
 namespace YaSaog.Entities.Menu {
 
@@ -19,6 +20,19 @@ namespace YaSaog.Entities.Menu {
 
             spriteBatch.DrawRectangle(BoundingBox, Color.LimeGreen);
             spriteBatch.DrawString(font, Text, new Vector2(BoundingBox.Center.X - fontSize.X / 2, BoundingBox.Center.Y - fontSize.Y / 2), Color.LimeGreen);
+
+            var score = Score.LoadFromFile(int.Parse(Text).ToString("00") + ".oel");
+
+            for (int i = 0; i < 3; i++) {
+                var pos = new Vector2(X + (i * 18), Y + 50);
+                var color = Color.Gray;
+
+                if (score != null && i < score.StarCount) {
+                    color = Color.Green;
+                }
+
+                spriteBatch.Draw(Assets.BubbleBlue, new Rectangle((int)pos.X, (int)pos.Y, 32, 32), color);
+            }   
         }
     }
 }
