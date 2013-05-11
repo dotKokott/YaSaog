@@ -15,7 +15,7 @@ namespace YaSaog.Scenes {
 
         public override void Init() {
             base.Init();
-
+                       
             var summary = new LevelSummary((int)((MainGame.Width / 2) - LevelSummary.StaticSize.X / 2), MainGame.Height, CurrentScene);
             summary.Actions.AddAction(new TweenPositionTo(summary, new Vector2(summary.X, (MainGame.Height / 2) - LevelSummary.StaticSize.Y / 2), 2f, Back.EaseOut), true);
 
