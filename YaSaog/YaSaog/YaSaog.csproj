@@ -113,10 +113,6 @@
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\BlowDryer.cs" />
     <Compile Include="Entities\Bubble.cs" />
-    <Compile Include="Entities\Collision\BaseCollider.cs" />
-    <Compile Include="Entities\Collision\CircleCollider.cs" />
-    <Compile Include="Entities\Collision\ColliderType.cs" />
-    <Compile Include="Entities\Collision\RectangleCollider.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
     <Compile Include="Entities\CirclingSpike.cs" />
     <Compile Include="Entities\Finish.cs" />
