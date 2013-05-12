@@ -56,14 +56,14 @@ namespace YaSaog.Scenes {
             base.Update(gameTime);
 
             if (Manager.Game.IsActive) {
-                if (Mouse.GetState().X < 0)
-                    Mouse.SetPosition(0, Mouse.GetState().Y);
-                if (Mouse.GetState().X > MainGame.Width)
-                    Mouse.SetPosition(MainGame.Width, Mouse.GetState().Y);
-                if (Mouse.GetState().Y < 0)
-                    Mouse.SetPosition(Mouse.GetState().X, 0);
-                if (Mouse.GetState().Y > MainGame.Height)
-                    Mouse.SetPosition(Mouse.GetState().X, MainGame.Height);
+                if (Manager.NewMouseState.X < 0)
+                    Mouse.SetPosition(0, Manager.NewMouseState.Y);
+                if (Manager.NewMouseState.X > MainGame.Width)
+                    Mouse.SetPosition(MainGame.Width, Manager.NewMouseState.Y);
+                if (Manager.NewMouseState.Y < 0)
+                    Mouse.SetPosition(Manager.NewMouseState.X, 0);
+                if (Manager.NewMouseState.Y > MainGame.Height)
+                    Mouse.SetPosition(Manager.NewMouseState.X, MainGame.Height);
             } else {
                 this.Manager.AddScene(new PauseScene());
             }

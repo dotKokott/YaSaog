@@ -30,6 +30,8 @@ namespace YaSaog.Scenes {
                 AddEntity(lvlButton);
             }
 
+            var back = new MenuButton(30, MainGame.Height - 80, "Back", () => { Manager.SwitchScene(new MenuScene()); });
+            AddEntity(back);
         }
 
         public override void Update(GameTime gameTime) {

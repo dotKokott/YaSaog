@@ -68,7 +68,7 @@ namespace YaSaog.Entities {
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
-            spriteBatch.Draw(Assets.HairDryer, BoundingBox, null, Color.White, rotation, new Vector2(Assets.HairDryer.Width / 2, Assets.HairDryer.Height / 3), SpriteEffects.None, 0);
+            spriteBatch.Draw(Assets.HairDryer, BoundingBox, null, Color.White, rotation + MathHelper.ToRadians(5f), new Vector2(Assets.HairDryer.Width / 2, Assets.HairDryer.Height / 3), SpriteEffects.None, 0);
         }
 
         public override void Delete() {
