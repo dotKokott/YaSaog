@@ -1,4 +1,29 @@
 <level width="1280" height="800">
   <Entities>
+    <Bubble id="0" x="128" y="416" />
+    <TweeningSpike id="1" x="320" y="96" ToX="320" ToY="384" TweenName="Linear.EaseIn" Duration="1" />
+    <TweeningSpike id="2" x="352" y="96" ToX="352" ToY="384" TweenName="Linear.EaseIn" Duration="1" />
+    <TweeningSpike id="3" x="448" y="96" ToX="448" ToY="384" TweenName="Linear.EaseIn" Duration="0,7" />
+    <TweeningSpike id="4" x="480" y="96" ToX="480" ToY="384" TweenName="Linear.EaseIn" Duration="0,7" />
+    <TweeningSpike id="5" x="576" y="96" ToX="576" ToY="384" TweenName="Linear.EaseIn" Duration="0,5" />
+    <TweeningSpike id="6" x="608" y="96" ToX="608" ToY="384" TweenName="Linear.EaseIn" Duration="0,5" />
+    <TweeningSpike id="7" x="704" y="96" ToX="704" ToY="384" TweenName="Linear.EaseIn" Duration="0,5" />
+    <TweeningSpike id="8" x="736" y="96" ToX="736" ToY="384" TweenName="Linear.EaseIn" Duration="0,5" />
+    <TweeningSpike id="9" x="832" y="96" ToX="832" ToY="384" TweenName="Linear.EaseIn" Duration="0,7" />
+    <TweeningSpike id="10" x="864" y="96" ToX="864" ToY="384" TweenName="Linear.EaseIn" Duration="0,7" />
+    <TweeningSpike id="11" x="320" y="672" ToX="320" ToY="384" TweenName="Linear.EaseIn" Duration="1" />
+    <TweeningSpike id="12" x="352" y="672" ToX="352" ToY="384" TweenName="Linear.EaseIn" Duration="1" />
+    <TweeningSpike id="13" x="448" y="672" ToX="448" ToY="384" TweenName="Linear.EaseIn" Duration="0,7" />
+    <TweeningSpike id="14" x="480" y="672" ToX="480" ToY="384" TweenName="Linear.EaseIn" Duration="0,7" />
+    <TweeningSpike id="15" x="576" y="672" ToX="576" ToY="384" TweenName="Linear.EaseIn" Duration="0,5" />
+    <TweeningSpike id="16" x="608" y="672" ToX="608" ToY="384" TweenName="Linear.EaseIn" Duration="0,5" />
+    <TweeningSpike id="17" x="704" y="672" ToX="704" ToY="384" TweenName="Linear.EaseIn" Duration="0,5" />
+    <TweeningSpike id="18" x="736" y="672" ToX="736" ToY="384" TweenName="Linear.EaseIn" Duration="0,5" />
+    <TweeningSpike id="19" x="832" y="672" ToX="832" ToY="384" TweenName="Linear.EaseIn" Duration="0,7" />
+    <TweeningSpike id="20" x="864" y="672" ToX="864" ToY="384" TweenName="Linear.EaseIn" Duration="0,7" />
+    <Star id="21" x="320" y="384" />
+    <Star id="22" x="576" y="384" />
+    <Star id="23" x="832" y="384" />
+    <Finish id="24" x="1120" y="384" />
   </Entities>
 </level>

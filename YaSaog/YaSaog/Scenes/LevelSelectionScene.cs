@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using YaSaog.Entities;
+using Microsoft.Xna.Framework.Input;
 using YaSaog.Entities.Menu;
-using System.Linq;
 
 namespace YaSaog.Scenes {
 
@@ -36,7 +35,9 @@ namespace YaSaog.Scenes {
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
 
-
+            if (Manager.NewKeyboardState.IsKeyDown(Keys.Escape)) {
+                Manager.SwitchScene(new MenuScene());
+            }
         }
     }
 }

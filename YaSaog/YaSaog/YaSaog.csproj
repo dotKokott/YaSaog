@@ -156,7 +156,6 @@
     <Compile Include="Utils\ActionLists\Actions\TweenPositionTo.cs" />
     <Compile Include="Utils\ActionLists\Actions\WaitForSeconds.cs" />
     <Compile Include="Utils\ActionLists\IAction.cs" />
-    <Compile Include="Utils\Coroutines\Coroutines.cs" />
     <Compile Include="Utils\ReflectionHelper.cs" />
   </ItemGroup>
   <ItemGroup>

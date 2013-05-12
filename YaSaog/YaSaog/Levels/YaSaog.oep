@@ -117,8 +117,8 @@
     </EntityDefinition>
     <EntityDefinition Name="Star" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
       <Size>
-        <Width>32</Width>
-        <Height>32</Height>
+        <Width>45</Width>
+        <Height>45</Height>
       </Size>
       <Origin>
         <X>0</X>
@@ -144,7 +144,7 @@
       </ImageDefinition>
       <ValueDefinitions>
         <ValueDefinition xsi:type="StringValueDefinition" Name="TweenName" Default="Linear.EaseIn" MaxChars="-1" MultiLine="false" />
-        <ValueDefinition xsi:type="FloatValueDefinition" Name="ToDegrees" Default="360" Min="0" Max="100" Round="0.1" />
+        <ValueDefinition xsi:type="FloatValueDefinition" Name="ToDegrees" Default="360" Min="0" Max="360" Round="0.1" />
         <ValueDefinition xsi:type="IntValueDefinition" Name="Modifier" Default="1" Min="-100" Max="100" ShowSlider="false" />
         <ValueDefinition xsi:type="FloatValueDefinition" Name="Duration" Default="3" Min="0" Max="1000" Round="0.1" />
         <ValueDefinition xsi:type="IntValueDefinition" Name="Radius" Default="25" Min="0" Max="1000" ShowSlider="false" />

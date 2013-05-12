@@ -21,7 +21,7 @@ namespace YaSaog.Entities {
 
             Offset = new Vector2(-Size.X / 2f, -Size.Y / 2f);
 
-            velocity = new Vector2(0f, 50f);
+            velocity = new Vector2(0f, 20f);
             friction = new Vector2(0.2f, 0.2f);
 
             Collidable = true;

@@ -44,8 +44,11 @@ namespace YaSaog.Scenes {
             }
         }
 
-        public override void Update(GameTime gameTime) {
-            base.Update(gameTime);
+        public override void Draw(ExtendedSpriteBatch spriteBatch) {
+            base.Draw(spriteBatch);
+            
+            spriteBatch.Draw(Assets.Logo, new Rectangle((MainGame.Width / 2) - 382 / 2, (MainGame.Height / 2) - 200, 382, 91), Color.White);
         }
+
     }
 }
