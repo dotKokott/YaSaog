@@ -57,10 +57,10 @@ namespace YaSaog.Entities {
                 var color = Color.Gray;
 
                 if (i < GameScene.CollectedStarCount) {
-                    color = Color.Green;
+                    color = Color.White;
                 }
 
-                spriteBatch.Draw(Assets.BubbleBlue, new Rectangle((int)pos.X, (int)pos.Y, 32, 32), color);
+                spriteBatch.Draw(Assets.Star, new Rectangle((int)pos.X, (int)pos.Y, 45, 45), color);
             }
         }
 

@@ -29,10 +29,10 @@ namespace YaSaog.Entities.Menu {
                 var color = Color.Gray;
 
                 if (Score != null && i < Score.StarCount) {
-                    color = Color.Green;
+                    color = Color.White;
                 }
 
-                spriteBatch.Draw(Assets.BubbleBlue, new Rectangle((int)pos.X, (int)pos.Y, 32, 32), color);
+                spriteBatch.Draw(Assets.Star, new Rectangle((int)pos.X, (int)pos.Y, 32, 32), color);
             }   
         }
     }

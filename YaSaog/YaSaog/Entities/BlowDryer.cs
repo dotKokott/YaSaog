@@ -49,8 +49,9 @@ namespace YaSaog.Entities {
             Y = mouseState.Y;            
 
             if (Target != null) {
-                var delta = Target.Position - Position;
-                rotation = -(float)Math.Atan2(delta.X, delta.Y) + MathHelper.ToRadians(95);
+                var target = new Vector2(Target.BoundingBox.Center.X, Target.BoundingBox.Center.Y);
+                var delta = target - Position;
+                rotation = -(float)Math.Atan2(delta.X, delta.Y) + MathHelper.ToRadians(90);
 
                 var windEmitterPosition = Position + new Vector2(70, -10);
                 

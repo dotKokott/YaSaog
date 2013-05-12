@@ -50,7 +50,7 @@ namespace YaSaog.Entities {
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
             var color = Color.White * ((1 / InitialVelocity.Length()) * Velocity.Length());
 
-            spriteBatch.Draw(Assets.BubbleBlue, BoundingBox, null, color, 0, Vector2.Zero, SpriteEffects.None, 0);            
+            spriteBatch.Draw(Assets.Cloud, BoundingBox, null, color, 0, Vector2.Zero, SpriteEffects.None, 0);            
         }
 
         public override void Delete() {

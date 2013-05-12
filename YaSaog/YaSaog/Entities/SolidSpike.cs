@@ -20,7 +20,7 @@ namespace YaSaog.Entities {
         }       
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
-            spriteBatch.Draw(Assets.BubbleBlue, BoundingBox, Color.Red);
+            spriteBatch.Draw(Assets.Spikes, BoundingBox, Color.White);
         }
 
         public override void Delete() {            

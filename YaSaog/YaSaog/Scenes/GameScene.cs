@@ -74,6 +74,8 @@ namespace YaSaog.Scenes {
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
+            spriteBatch.Draw(Assets.IngameBackground, new Rectangle(0, 0, MainGame.Width, MainGame.Height), Color.White);
+
             base.Draw(spriteBatch);
 
             for (int i = 0; i < InitialStarCount; i++) {
@@ -81,10 +83,10 @@ namespace YaSaog.Scenes {
                 var color = Color.Gray;
 
                 if (i < CollectedStarCount) {
-                    color = Color.Green;
+                    color = Color.White;
                 }
 
-                spriteBatch.Draw(Assets.BubbleBlue, new Rectangle((int)pos.X, (int)pos.Y, 32, 32), color);
+                spriteBatch.Draw(Assets.Star, new Rectangle((int)pos.X, (int)pos.Y, 45, 45), color);
             }            
         }
     }

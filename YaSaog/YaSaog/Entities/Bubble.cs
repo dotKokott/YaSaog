@@ -74,7 +74,7 @@ namespace YaSaog.Entities {
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
-            spriteBatch.Draw(Assets.BubbleBlue, new Rectangle((int)X, (int)Y, (int)Size.X + 10, (int)Size.Y + 10), null, Color.White, 0, new Vector2(Assets.BubbleBlue.Width / 2, Assets.BubbleBlue.Height / 2), SpriteEffects.None, 0);
+            spriteBatch.Draw(Assets.BubbleBlue, new Rectangle((int)X, (int)Y, (int)Size.X + 10, (int)Size.Y + 10), null, Color.Purple, 0, new Vector2(Assets.BubbleBlue.Width / 2, Assets.BubbleBlue.Height / 2), SpriteEffects.None, 0);
         }
 
         public override void Delete() {            
