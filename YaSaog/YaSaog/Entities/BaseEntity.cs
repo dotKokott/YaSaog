@@ -3,15 +3,12 @@ using System.Linq;
 using Microsoft.Xna.Framework;
 using YaSaog.Scenes;
 using YaSaog.Utils.ActionLists;
-using YaSaog.Utils.Coroutines;
 
 namespace YaSaog.Entities {
 
     public abstract class BaseEntity {
 
         public ActionList Actions = new ActionList();
-        public Coroutines Coroutines = new Coroutines();
-
         public Vector2 Size { get; set; }
         public Vector2 Offset { get; set; }
 
@@ -56,7 +53,6 @@ namespace YaSaog.Entities {
 
         public virtual void Update(GameTime gameTime) {
             Actions.Update(gameTime);
-            Coroutines.Update();
         }
 
         public abstract void Draw(ExtendedSpriteBatch spriteBatch);

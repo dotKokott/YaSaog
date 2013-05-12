@@ -6,11 +6,11 @@ namespace YaSaog.Entities {
 
     public class CirclingSpike : BaseEntity {
 
-        private Tweener tween { get; set; }
-        private float degrees { get; set; }
+        private Tweener tween { get; set; }        
         private Vector2 radiusVector { get; set; }
 
         public string TweenName { get; set; }
+        public float Degrees { get; set; }
         public float ToDegrees { get; set; }
         public float Radius { get; set; }
         public float Duration { get; set; }
@@ -48,7 +48,7 @@ namespace YaSaog.Entities {
 
             var del = (TweeningFunction)TweeningFunction.CreateDelegate(typeof(TweeningFunction), method);
 
-            tween = new Tweener(0, ToDegrees, Duration, del);
+            tween = new Tweener(Degrees, ToDegrees, Duration, del);
             
             if (ReverseOnFinish) {
                 tween.Ended += delegate() { tween.Reverse(); };            
@@ -61,10 +61,10 @@ namespace YaSaog.Entities {
             base.Update(gameTime);                        
 
             tween.Update(gameTime);
-            degrees = tween.Position * Modifier;
+            Degrees = tween.Position * Modifier;
 
             var _pos = Center + radiusVector;
-            Position = Vector2.Transform(_pos - Center, Matrix.CreateRotationZ(MathHelper.ToRadians(degrees))) + Center;            
+            Position = Vector2.Transform(_pos - Center, Matrix.CreateRotationZ(MathHelper.ToRadians(Degrees))) + Center;            
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {

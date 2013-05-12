@@ -4,7 +4,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using YaSaog.Entities;
 using YaSaog.Utils.ActionLists;
-using YaSaog.Utils.Coroutines;
 
 namespace YaSaog.Scenes {
 
@@ -15,7 +14,6 @@ namespace YaSaog.Scenes {
         public SceneManager Manager { get; set; }       
         
         public ActionList Actions = new ActionList();
-        public Coroutines Coroutines = new Coroutines();
         public List<BaseEntity> Entities = new List<BaseEntity>();
 
         public BaseScene() {            
@@ -50,7 +48,6 @@ namespace YaSaog.Scenes {
             }            
 
             Actions.Update(gameTime);
-            Coroutines.Update();
         }
 
         public virtual void Draw(ExtendedSpriteBatch spriteBatch) {

@@ -1,4 +1,15 @@
 <level width="1280" height="800">
   <Entities>
+    <Bubble id="0" x="128" y="352" />
+    <CirclingSpike id="1" x="640" y="352" TweenName="Linear.EaseIn" ToDegrees="360" Modifier="1" Duration="2,5" Radius="310" ReverseOnFinish="False" />
+    <CirclingSpike id="2" x="640" y="352" TweenName="Linear.EaseIn" ToDegrees="360" Modifier="1" Duration="2,5" Radius="260" ReverseOnFinish="False" />
+    <CirclingSpike id="3" x="640" y="352" TweenName="Linear.EaseIn" ToDegrees="360" Modifier="1" Duration="2,5" Radius="220" ReverseOnFinish="False" />
+    <CirclingSpike id="4" x="640" y="352" TweenName="Linear.EaseIn" ToDegrees="360" Modifier="1" Duration="2,5" Radius="180" ReverseOnFinish="False" />
+    <CirclingSpike id="5" x="640" y="352" TweenName="Linear.EaseIn" ToDegrees="360" Modifier="1" Duration="2,5" Radius="140" ReverseOnFinish="False" />
+    <CirclingSpike id="6" x="640" y="352" TweenName="Linear.EaseIn" ToDegrees="360" Modifier="1" Duration="2,5" Radius="100" ReverseOnFinish="False" />
+    <Star id="7" x="352" y="544" />
+    <Star id="8" x="576" y="352" />
+    <Star id="9" x="640" y="64" />
+    <Finish id="10" x="1120" y="352" />
   </Entities>
 </level>
