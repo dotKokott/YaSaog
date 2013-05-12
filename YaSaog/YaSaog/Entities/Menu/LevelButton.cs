@@ -13,7 +13,7 @@ namespace YaSaog.Entities.Menu {
         public LevelButton(int posX, int posY, string text, Action onClick)
             : base(posX, posY, text, onClick) {
 
-                Size = new Vector2(64, 64);
+                Size = new Vector2(100, 87);
                 Score = Score.LoadFromFile(int.Parse(Text).ToString("00") + ".oel");
         }
 
@@ -21,11 +21,11 @@ namespace YaSaog.Entities.Menu {
             var font = Selected ? Assets.MenuSelected : Assets.MenuDefault;
             var fontSize = font.MeasureString(Text);
 
-            spriteBatch.DrawRectangle(BoundingBox, Color.LimeGreen);
-            spriteBatch.DrawString(font, Text, new Vector2(BoundingBox.Center.X - fontSize.X / 2, BoundingBox.Center.Y - fontSize.Y / 2), Color.LimeGreen);
+            spriteBatch.Draw(Assets.Duck, BoundingBox, Color.White);            
+            spriteBatch.DrawString(font, Text, new Vector2(BoundingBox.Center.X - fontSize.X / 2, BoundingBox.Center.Y - fontSize.Y / 2), Color.DarkRed);
            
             for (int i = 0; i < 3; i++) {
-                var pos = new Vector2(X + (i * 18), Y + 50);
+                var pos = new Vector2(X + (i * 18) + 20, Y + 60);
                 var color = Color.Gray;
 
                 if (Score != null && i < Score.StarCount) {

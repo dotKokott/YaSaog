@@ -30,14 +30,13 @@ namespace YaSaog.Scenes {
         }
 
         public void LoadMenu(List<MenuButton> buttons) {
-
             foreach (var but in Entities.Where(but => but.CollisionType == "menubutton")) {
                 RemoveEntity(but);
             }
 
             for (int i = 0; i < buttons.Count; i++) {
                 var button = buttons[i];
-                var pos = new Vector2((MainGame.Width / 2) - button.Size.X / 2, (MainGame.Height / 2) + (button.Size.Y + 50 * i));
+                var pos = new Vector2((MainGame.Width / 2) - button.Size.X / 2, (MainGame.Height / 2) + (button.Size.Y + 75 * i));
                 button.Position = pos;
 
                 AddEntity(button);
@@ -45,9 +44,11 @@ namespace YaSaog.Scenes {
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
-            base.Draw(spriteBatch);
-            
+            spriteBatch.Draw(Assets.MenuBackground, new Rectangle(0, 0, MainGame.Width, MainGame.Height), Color.White);
+
             spriteBatch.Draw(Assets.Logo, new Rectangle((MainGame.Width / 2) - 382 / 2, (MainGame.Height / 2) - 200, 382, 91), Color.White);
+            
+            base.Draw(spriteBatch);
         }
 
     }

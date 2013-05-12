@@ -9,7 +9,7 @@ namespace YaSaog.Scenes {
         public override void Init() {
             base.Init();
 
-            var startPosX = 300;
+            var startPosX = 220;
             var startPosY = 150;
 
             var posX = startPosX;
@@ -40,6 +40,12 @@ namespace YaSaog.Scenes {
             if (Manager.NewKeyboardState.IsKeyDown(Keys.Escape)) {
                 Manager.SwitchScene(new MenuScene());
             }
+        }
+
+        public override void Draw(ExtendedSpriteBatch spriteBatch) {
+            spriteBatch.Draw(Assets.MenuBackground, new Rectangle(0, 0, MainGame.Width, MainGame.Height), Color.White);
+            
+            base.Draw(spriteBatch);
         }
     }
 }

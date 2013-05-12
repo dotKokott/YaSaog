@@ -17,12 +17,17 @@ namespace YaSaog {
         public static SpriteFont MenuSelected { get; set; }
 
         public static Texture2D Logo { get; set; }
+        public static Texture2D MenuBackground { get; set; }
         public static Texture2D IngameBackground { get; set; }
+        public static Texture2D Towel { get; set; }
         public static Texture2D BubbleBlue { get; set; }
         public static Texture2D HairDryer { get; set; }
         public static Texture2D Cloud { get; set; }
         public static Texture2D Spikes { get; set; }
         public static Texture2D Star { get; set; }
+
+        public static Texture2D Button { get; set; }
+        public static Texture2D Duck { get; set; }
 
         public static List<Level> Levels { get; set; }
 
@@ -47,12 +52,17 @@ namespace YaSaog {
             MenuSelected = content.Load<SpriteFont>("MenuSelectedFont");
 
             Logo = content.Load<Texture2D>("Images/logo");
+            MenuBackground = content.Load<Texture2D>("Images/menu_bg");
+            Towel = content.Load<Texture2D>("Images/towel");
             IngameBackground = content.Load<Texture2D>("Images/ingame");
             BubbleBlue = content.Load<Texture2D>("Images/bubble_blue");
             HairDryer = content.Load<Texture2D>("Images/hair_dryer");
             Cloud = content.Load<Texture2D>("Images/cloud");
             Spikes = content.Load<Texture2D>("Images/spikes");
             Star = content.Load<Texture2D>("Images/star");
+
+            Button = content.Load<Texture2D>("Images/button");
+            Duck = content.Load<Texture2D>("Images/duck");
 
             Levels = new List<Level>();
             foreach (var file in Directory.GetFiles("Levels", "*.oel").OrderBy(f => f)) {

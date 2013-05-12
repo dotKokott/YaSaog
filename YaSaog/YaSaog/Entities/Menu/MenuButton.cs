@@ -47,8 +47,9 @@ namespace YaSaog.Entities.Menu {
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
-            var font = Selected ? Assets.MenuSelected : Assets.MenuDefault;
-            spriteBatch.DrawString(font, Text, Position, Color.LimeGreen);
+            var recSize = Selected ? new Point(150, 82) : new Point(100, 55);
+            spriteBatch.Draw(Assets.Button, new Rectangle((int)Position.X - (recSize.X / 2) + (int)(Size.X / 2), (int)Position.Y - (recSize.Y / 2) + (int)(Size.Y / 2), recSize.X, recSize.Y), Color.White);
+            spriteBatch.DrawString(Assets.MenuDefault, Text, Position, Color.DarkRed);
         }
 
         public override void Delete() {

@@ -10,7 +10,7 @@ namespace YaSaog.Entities {
             X = posX;
             Y = posY;
 
-            Size = new Vector2(32, 32);
+            Size = new Vector2(50, 44);
 
             Collidable = true;
             CollisionType = "finish";
@@ -22,12 +22,10 @@ namespace YaSaog.Entities {
 
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
-
-
         }
 
         public override void Draw(ExtendedSpriteBatch spriteBatch) {
-            spriteBatch.Draw(Assets.BubbleBlue, BoundingBox, Color.Yellow);
+            spriteBatch.Draw(Assets.Duck, BoundingBox, Color.White);
         }
 
         public override void Delete() {
