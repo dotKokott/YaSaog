@@ -55,14 +55,18 @@ namespace YaSaog.Scenes {
         public override void Update(GameTime gameTime) {
             base.Update(gameTime);
 
-            if (Mouse.GetState().X < 0)
-                Mouse.SetPosition(0, Mouse.GetState().Y);
-            if (Mouse.GetState().X > MainGame.Width)
-                Mouse.SetPosition(MainGame.Width, Mouse.GetState().Y);
-            if (Mouse.GetState().Y < 0)
-                Mouse.SetPosition(Mouse.GetState().X, 0);
-            if (Mouse.GetState().Y > MainGame.Height)
-                Mouse.SetPosition(Mouse.GetState().X, MainGame.Height);
+            if (Manager.Game.IsActive) {
+                if (Mouse.GetState().X < 0)
+                    Mouse.SetPosition(0, Mouse.GetState().Y);
+                if (Mouse.GetState().X > MainGame.Width)
+                    Mouse.SetPosition(MainGame.Width, Mouse.GetState().Y);
+                if (Mouse.GetState().Y < 0)
+                    Mouse.SetPosition(Mouse.GetState().X, 0);
+                if (Mouse.GetState().Y > MainGame.Height)
+                    Mouse.SetPosition(Mouse.GetState().X, MainGame.Height);
+            } else {
+                this.Manager.AddScene(new PauseScene());
+            }
 
             Time += (float)gameTime.ElapsedGameTime.TotalSeconds;
 
