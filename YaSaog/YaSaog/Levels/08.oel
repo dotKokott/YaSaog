@@ -1,4 +1,117 @@
 <level width="1280" height="800">
   <Entities>
+    <Bubble id="0" x="128" y="352" />
+    <SolidSpike id="1" x="256" y="576" />
+    <SolidSpike id="2" x="288" y="576" />
+    <SolidSpike id="3" x="288" y="544" />
+    <SolidSpike id="4" x="256" y="544" />
+    <SolidSpike id="5" x="256" y="512" />
+    <SolidSpike id="6" x="288" y="512" />
+    <SolidSpike id="7" x="288" y="480" />
+    <SolidSpike id="8" x="256" y="480" />
+    <SolidSpike id="9" x="256" y="448" />
+    <SolidSpike id="10" x="288" y="448" />
+    <SolidSpike id="11" x="288" y="416" />
+    <SolidSpike id="12" x="256" y="416" />
+    <SolidSpike id="13" x="256" y="384" />
+    <SolidSpike id="14" x="288" y="384" />
+    <SolidSpike id="15" x="288" y="352" />
+    <SolidSpike id="16" x="256" y="352" />
+    <SolidSpike id="17" x="256" y="320" />
+    <SolidSpike id="18" x="288" y="320" />
+    <SolidSpike id="19" x="256" y="288" />
+    <SolidSpike id="20" x="288" y="288" />
+    <SolidSpike id="21" x="288" y="256" />
+    <SolidSpike id="22" x="256" y="256" />
+    <SolidSpike id="23" x="256" y="224" />
+    <SolidSpike id="24" x="288" y="224" />
+    <SolidSpike id="25" x="288" y="192" />
+    <SolidSpike id="26" x="256" y="192" />
+    <SolidSpike id="27" x="256" y="160" />
+    <SolidSpike id="28" x="288" y="160" />
+    <SolidSpike id="29" x="288" y="128" />
+    <SolidSpike id="30" x="256" y="128" />
+    <TweeningSpike id="32" x="256" y="640" ToX="1024" ToY="640" TweenName="Back.EaseIn" Duration="2" />
+    <TweeningSpike id="33" x="256" y="672" ToX="1024" ToY="672" TweenName="Back.EaseIn" Duration="2" />
+    <TweeningSpike id="31" x="256" y="96" ToX="1024" ToY="96" TweenName="Back.EaseIn" Duration="2" />
+    <TweeningSpike id="34" x="256" y="64" ToX="1024" ToY="64" TweenName="Back.EaseIn" Duration="2" />
+    <SolidSpike id="35" x="544" y="576" />
+    <SolidSpike id="36" x="576" y="576" />
+    <SolidSpike id="37" x="576" y="544" />
+    <SolidSpike id="38" x="544" y="544" />
+    <SolidSpike id="39" x="544" y="512" />
+    <SolidSpike id="40" x="576" y="512" />
+    <SolidSpike id="41" x="576" y="480" />
+    <SolidSpike id="42" x="544" y="480" />
+    <SolidSpike id="43" x="544" y="448" />
+    <SolidSpike id="44" x="576" y="448" />
+    <SolidSpike id="45" x="576" y="416" />
+    <SolidSpike id="46" x="544" y="416" />
+    <SolidSpike id="47" x="544" y="384" />
+    <SolidSpike id="48" x="576" y="384" />
+    <SolidSpike id="49" x="576" y="352" />
+    <SolidSpike id="50" x="544" y="352" />
+    <SolidSpike id="51" x="576" y="320" />
+    <SolidSpike id="52" x="544" y="320" />
+    <SolidSpike id="53" x="544" y="288" />
+    <SolidSpike id="54" x="576" y="288" />
+    <SolidSpike id="55" x="576" y="256" />
+    <SolidSpike id="56" x="544" y="256" />
+    <SolidSpike id="57" x="544" y="224" />
+    <SolidSpike id="58" x="576" y="224" />
+    <SolidSpike id="59" x="576" y="192" />
+    <SolidSpike id="60" x="544" y="192" />
+    <SolidSpike id="61" x="544" y="160" />
+    <SolidSpike id="62" x="576" y="160" />
+    <SolidSpike id="63" x="576" y="128" />
+    <SolidSpike id="64" x="544" y="128" />
+    <SolidSpike id="65" x="864" y="128" />
+    <SolidSpike id="66" x="896" y="128" />
+    <SolidSpike id="67" x="896" y="160" />
+    <SolidSpike id="68" x="864" y="160" />
+    <SolidSpike id="69" x="864" y="192" />
+    <SolidSpike id="70" x="896" y="192" />
+    <SolidSpike id="71" x="896" y="224" />
+    <SolidSpike id="72" x="864" y="224" />
+    <SolidSpike id="73" x="864" y="256" />
+    <SolidSpike id="74" x="896" y="256" />
+    <SolidSpike id="75" x="896" y="288" />
+    <SolidSpike id="76" x="864" y="288" />
+    <SolidSpike id="77" x="864" y="320" />
+    <SolidSpike id="78" x="896" y="320" />
+    <SolidSpike id="79" x="864" y="352" />
+    <SolidSpike id="80" x="896" y="352" />
+    <SolidSpike id="81" x="864" y="384" />
+    <SolidSpike id="82" x="896" y="384" />
+    <SolidSpike id="83" x="864" y="416" />
+    <SolidSpike id="84" x="896" y="416" />
+    <SolidSpike id="85" x="864" y="448" />
+    <SolidSpike id="86" x="896" y="448" />
+    <SolidSpike id="87" x="864" y="480" />
+    <SolidSpike id="88" x="896" y="480" />
+    <SolidSpike id="89" x="864" y="512" />
+    <SolidSpike id="90" x="896" y="512" />
+    <SolidSpike id="91" x="864" y="544" />
+    <SolidSpike id="92" x="896" y="544" />
+    <SolidSpike id="93" x="864" y="576" />
+    <SolidSpike id="94" x="896" y="576" />
+    <CirclingSpike id="95" x="736" y="352" TweenName="Back.EaseIn" ToDegrees="360" Modifier="1" Duration="2" Radius="75" ReverseOnFinish="False" />
+    <SolidSpike id="96" x="960" y="128" />
+    <SolidSpike id="97" x="928" y="128" />
+    <SolidSpike id="98" x="992" y="96" />
+    <SolidSpike id="99" x="1024" y="96" />
+    <SolidSpike id="100" x="1056" y="64" />
+    <SolidSpike id="101" x="1088" y="64" />
+    <SolidSpike id="102" x="1120" y="32" />
+    <SolidSpike id="103" x="1152" y="32" />
+    <SolidSpike id="104" x="1184" y="0" />
+    <SolidSpike id="105" x="1216" y="0" />
+    <SolidSpike id="106" x="1248" y="0" />
+    <Finish id="107" x="1120" y="160" />
+    <CirclingSpike id="108" x="1088" y="352" TweenName="Linear.EaseIn" ToDegrees="180" Modifier="1" Duration="1" Radius="75" ReverseOnFinish="True" />
+    <CirclingSpike id="109" x="1088" y="352" TweenName="Linear.EaseIn" ToDegrees="180" Modifier="-1" Duration="1" Radius="75" ReverseOnFinish="False" />
+    <Star id="110" x="416" y="384" />
+    <Star id="111" x="736" y="352" />
+    <Star id="112" x="1088" y="352" />
   </Entities>
 </level>

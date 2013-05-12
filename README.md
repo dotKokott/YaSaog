@@ -5,15 +5,15 @@ Bubble themed game for my admission assignment
 
 Controls
 =======
-Mouse		-> Move blow dryer
+Mouse		-> Move hair dryer
 
 Left Click 	-> Blow
 
-P 			-> Pause
+P 			-> Pause / Unpause
 
 R 			-> Restart level
 
-Escape		-> Back to Menu
+Escape		-> Back to menu
 
 
 F12			-> Debug overlay
@@ -31,3 +31,5 @@ BlowDryer sfx -> lawnjelly (freesound.org)
 Star sfx -> Luke.RUSTLTD (opengameart.org)
 
 Finish sfx -> fins (freesound.org)
+
+Easing functions -> xnatweener.codeplex.com
