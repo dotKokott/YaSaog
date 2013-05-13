@@ -1,5 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
-using YaSaog.Scenes;
+
 namespace YaSaog.Entities {
 
     public class SolidSpike : BaseEntity {
@@ -11,8 +11,6 @@ namespace YaSaog.Entities {
             Y = posY;
 
             Size = new Vector2(32, 32);
-            Collidable = true;
-
             CollisionType = "spike";
         }
 

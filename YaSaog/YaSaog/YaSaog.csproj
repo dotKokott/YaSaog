@@ -111,7 +111,7 @@
     <Compile Include="Assets.cs" />
     <Compile Include="DebugComponent.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
-    <Compile Include="Entities\BlowDryer.cs" />
+    <Compile Include="Entities\HairDryer.cs" />
     <Compile Include="Entities\Bubble.cs" />
     <Compile Include="Entities\EntityFactory.cs" />
     <Compile Include="Entities\CirclingSpike.cs" />

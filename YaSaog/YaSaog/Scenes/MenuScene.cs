@@ -2,7 +2,6 @@
 using System.Linq;
 using Microsoft.Xna.Framework;
 using YaSaog.Entities.Menu;
-using Microsoft.Xna.Framework.Media;
 
 namespace YaSaog.Scenes {
 

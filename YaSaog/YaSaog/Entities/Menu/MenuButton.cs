@@ -9,25 +9,22 @@ namespace YaSaog.Entities.Menu {
         public bool Selected { get; private set; }
 
         public Action OnClick { get; set; }
+
         public string Text { get; private set; }
 
         public MenuButton(int posX, int posY, string text, Action onClick) {
             X = posX;
             Y = posY;
-                        
-            Text = text;
+                                    
             Size = Assets.UI.MeasureString(text);
-
-            OnClick = onClick;
-
-            Selected = false;
-
-            Collidable = true;
             CollisionType = "menubutton";
+
+            Text = text;
+            OnClick = onClick;
+            Selected = false;                       
         }
 
-        public override void Init() {
-            
+        public override void Init() {            
         }
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime) {
@@ -52,8 +49,7 @@ namespace YaSaog.Entities.Menu {
             spriteBatch.DrawString(Assets.MenuDefault, Text, Position, Color.DarkRed);
         }
 
-        public override void Delete() {
-            
+        public override void Delete() {            
         }
     }
 }

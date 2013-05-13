@@ -12,9 +12,7 @@ namespace YaSaog.Entities {
             X = posX;
             Y = posY;
     
-            Size = new Vector2(45, 45);
-        
-            Collidable = true;
+            Size = new Vector2(45, 45);        
             CollisionType = "star";      
         }
 

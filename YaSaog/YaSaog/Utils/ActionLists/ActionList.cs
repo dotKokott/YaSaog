@@ -1,7 +1,7 @@
-﻿using System.Linq;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Microsoft.Xna.Framework;
-using System;
 
 namespace YaSaog.Utils.ActionLists {
     public class ActionList : IAction {

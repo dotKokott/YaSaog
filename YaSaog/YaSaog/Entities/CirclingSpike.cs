@@ -40,13 +40,7 @@ namespace YaSaog.Entities {
             Center = new Vector2(X, Y);
             radiusVector = new Vector2(Radius, Radius);
 
-            var tweenClass = TweenName.Split('.')[0];
-            var tweenMethod = TweenName.Split('.')[1];
-
-            var type = ReflectionHelper.GetTypeByName("YaSaog.Tweening." + tweenClass);
-            var method = type.GetMethod(tweenMethod);
-
-            var del = (TweeningFunction)TweeningFunction.CreateDelegate(typeof(TweeningFunction), method);
+            var del = ReflectionHelper.GetTweenDelegateByName(TweenName);
 
             tween = new Tweener(Degrees, ToDegrees, Duration, del);
             

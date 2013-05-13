@@ -6,14 +6,14 @@ using Microsoft.Xna.Framework.Input;
 
 namespace YaSaog.Entities {
 
-    public class BlowDryer : BaseEntity {
+    public class HairDryer : BaseEntity {
 
         public BaseEntity Target { get; set; }
 
         private float rotation = 0f;
         private WindEmitter windEmitter { get; set; }
 
-        public BlowDryer() {
+        public HairDryer() {
             Size = new Vector2(Assets.HairDryer.Width / 2, Assets.HairDryer.Height / 2);
             Collidable = false;
 

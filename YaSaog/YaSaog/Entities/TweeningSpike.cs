@@ -31,13 +31,7 @@ namespace YaSaog.Entities {
         }
 
         public override void Init() {
-            var tweenClass = TweenName.Split('.')[0];
-            var tweenMethod = TweenName.Split('.')[1];
-
-            var type = ReflectionHelper.GetTypeByName("YaSaog.Tweening." + tweenClass);
-            var method = type.GetMethod(tweenMethod);
-
-            var del = (TweeningFunction)TweeningFunction.CreateDelegate(typeof(TweeningFunction), method);
+            var del = ReflectionHelper.GetTweenDelegateByName(TweenName);
 
             tweenX = new Tweener(X, ToX, Duration, del);
             tweenX.Ended += delegate() { tweenX.Reverse(); };

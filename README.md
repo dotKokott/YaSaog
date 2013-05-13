@@ -20,7 +20,7 @@ F12			-> Debug overlay
 
 Credits
 ========
-Art -> Damla Yasar
+Art -> Damla
 
 In-game Music -> @rezoner (opengameart.org)
 

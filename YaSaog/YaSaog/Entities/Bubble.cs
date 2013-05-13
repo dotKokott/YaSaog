@@ -18,18 +18,15 @@ namespace YaSaog.Entities {
             Y = y;
 
             Size = new Vector2(32, 32);
-
             Offset = new Vector2(-Size.X / 2f, -Size.Y / 2f);
+            CollisionType = "bubble";
 
             velocity = new Vector2(0f, 20f);
-            friction = new Vector2(0.2f, 0.2f);
-
-            Collidable = true;
-            CollisionType = "bubble";
+            friction = new Vector2(0.2f, 0.2f);            
         }
 
         public override void Init() {
-            var dryer = new BlowDryer();
+            var dryer = new HairDryer();
             dryer.Target = this;
 
             Scene.AddEntity(dryer);

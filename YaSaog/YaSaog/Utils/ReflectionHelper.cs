@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection;
+using YaSaog.Tweening;
 
 namespace YaSaog.Utils {
 
@@ -31,6 +32,16 @@ namespace YaSaog.Utils {
             if (prop != null) {
                 prop.SetValue(obj, Convert.ChangeType(value, prop.PropertyType), null);
             }
+        }
+
+        public static TweeningFunction GetTweenDelegateByName(string tweenName) {
+            var tweenClass = tweenName.Split('.')[0];
+            var tweenMethod = tweenName.Split('.')[1];
+
+            var type = ReflectionHelper.GetTypeByName("YaSaog.Tweening." + tweenClass);
+            var method = type.GetMethod(tweenMethod);
+
+            return (TweeningFunction)TweeningFunction.CreateDelegate(typeof(TweeningFunction), method);
         }
     }
 }

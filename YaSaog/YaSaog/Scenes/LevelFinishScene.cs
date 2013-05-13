@@ -1,9 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using YaSaog.Entities;
+using YaSaog.Scores;
 using YaSaog.Tweening;
 using YaSaog.Utils.ActionLists.Actions;
-using YaSaog.Scores;
-using System.Linq;
 
 namespace YaSaog.Scenes {
 

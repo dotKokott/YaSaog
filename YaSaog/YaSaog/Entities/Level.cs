@@ -1,5 +1,4 @@
 ﻿using System.Xml;
-using System.Collections.Generic;
 
 namespace YaSaog.Entities {
 
