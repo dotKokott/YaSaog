@@ -43,10 +43,9 @@ namespace YaSaog.Entities {
 
             if (mouseState.LeftButton == ButtonState.Pressed && Assets.DryerOn.State == SoundState.Stopped && Assets.DryerDry.State != SoundState.Playing) {
                 Assets.DryerDry.Play();
-            }                        
+            }
 
-            X = mouseState.X;
-            Y = mouseState.Y;            
+            Position = Scene.Manager.Game.Cursor.Position;            
 
             if (Target != null) {
                 var target = new Vector2(Target.BoundingBox.Center.X, Target.BoundingBox.Center.Y);

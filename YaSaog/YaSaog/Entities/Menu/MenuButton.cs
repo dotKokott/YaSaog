@@ -31,7 +31,8 @@ namespace YaSaog.Entities.Menu {
             base.Update(gameTime);
 
             var mouseState = Scene.Manager.NewMouseState;
-            var mouseBox = new Rectangle(mouseState.X - 5, mouseState.Y - 5, 10, 10);
+            var mousePos = Scene.Manager.Game.Cursor.Position;
+            var mouseBox = new Rectangle((int)mousePos.X - 5, (int)mousePos.Y - 5, 10, 10);
             var _selected = Selected;
             Selected = this.BoundingBox.Intersects(mouseBox);
 

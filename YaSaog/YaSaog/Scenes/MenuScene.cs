@@ -12,8 +12,6 @@ namespace YaSaog.Scenes {
 
             Manager.FadeInSong(Assets.Menu, true, 0.2f);
 
-            Manager.Game.IsMouseVisible = true;
-
             var mainMenu = new List<MenuButton>();
             
             var play = new MenuButton(0, 0, "Play", () => { Manager.SwitchScene(new LevelSelectionScene()); });

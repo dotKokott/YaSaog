@@ -16,6 +16,7 @@ namespace YaSaog {
         public static SpriteFont MenuDefault { get; set; }
         public static SpriteFont MenuSelected { get; set; }
 
+        public static Texture2D Cursor { get; set; }
         public static Texture2D Logo { get; set; }
         public static Texture2D MenuBackground { get; set; }
         public static Texture2D IngameBackground { get; set; }
@@ -51,6 +52,7 @@ namespace YaSaog {
             MenuDefault = content.Load<SpriteFont>("MenuDefaultFont");
             MenuSelected = content.Load<SpriteFont>("MenuSelectedFont");
 
+            Cursor = content.Load<Texture2D>("Images/cursor");
             Logo = content.Load<Texture2D>("Images/logo");
             MenuBackground = content.Load<Texture2D>("Images/menu_bg");
             Towel = content.Load<Texture2D>("Images/towel");

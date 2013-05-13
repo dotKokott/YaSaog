@@ -18,6 +18,7 @@ namespace YaSaog {
         public static int Height = 800;
         public bool IsFullScreen = false;
 
+        public Cursor Cursor;
         public SceneManager SceneManager;
         
         public MainGame() {
@@ -43,13 +44,15 @@ namespace YaSaog {
         protected override void LoadContent() {
             spriteBatch = new ExtendedSpriteBatch(GraphicsDevice);
             Assets.LoadContent(Content);
-
+            
             SceneManager = new SceneManager(this);
 
             float scaleX = graphics.GraphicsDevice.Viewport.Width / Width;
             float scaleY = graphics.GraphicsDevice.Viewport.Height / Height;
 
             spriteScale = Matrix.CreateScale(scaleX, scaleY, 1);
+
+            Cursor = new Cursor(spriteScale);
         }
 
         protected override void UnloadContent() {
@@ -57,6 +60,8 @@ namespace YaSaog {
         }
 
         protected override void Update(GameTime gameTime) {
+            Cursor.Update(gameTime);
+
             SceneManager.Update(gameTime);
 
             debugComponent.Update(gameTime);
@@ -72,6 +77,8 @@ namespace YaSaog {
             SceneManager.Draw(spriteBatch);
 
             debugComponent.Draw(spriteBatch, gameTime);
+
+            Cursor.Draw(spriteBatch);
 
             spriteBatch.End();
 

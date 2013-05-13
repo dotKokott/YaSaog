@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets.cs" />
+    <Compile Include="Cursor.cs" />
     <Compile Include="DebugComponent.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\HairDryer.cs" />
