@@ -9,6 +9,7 @@ Content\Images\button.xnb
 Content\Images\duck.xnb
 Content\Images\menu_bg.xnb
 Content\Images\towel.xnb
+Content\Images\cursor.xnb
 Content\SmallDebugFont.xnb
 Content\UIFont.xnb
 Content\MenuDefaultFont.xnb
@@ -22,7 +23,6 @@ Content\Music\Effects\dryer_on.xnb
 Content\Music\Effects\star_collect.xnb
 Content\Music\Effects\finish.xnb
 Content\Music\Effects\bubble_pop.xnb
-Content\Images\cursor.xnb
 Content\Music\Songs\ingame.wma
 Levels\1.png
 Levels\01.oel
