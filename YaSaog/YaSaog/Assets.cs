@@ -73,7 +73,7 @@ namespace YaSaog {
             }
 
             Ingame = content.Load<Song>("Music/Songs/ingame");
-            Menu = content.Load<Song>("Music/Songs/menu");
+            Menu = content.Load<Song>("Music/Songs/ingame");
 
             MenuHover = content.Load<SoundEffect>("Music/Effects/menu_hover");
             MenuClick = content.Load<SoundEffect>("Music/Effects/menu_click");

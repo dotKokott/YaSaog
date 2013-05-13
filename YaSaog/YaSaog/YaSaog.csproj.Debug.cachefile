@@ -14,7 +14,6 @@ Content\UIFont.xnb
 Content\MenuDefaultFont.xnb
 Content\MenuSelectedFont.xnb
 Content\Music\Songs\ingame.xnb
-Content\Music\Songs\menu.xnb
 Content\Music\Effects\menu_hover.xnb
 Content\Music\Effects\menu_click.xnb
 Content\Music\Effects\dryer_dry.xnb
@@ -24,7 +23,6 @@ Content\Music\Effects\star_collect.xnb
 Content\Music\Effects\finish.xnb
 Content\Music\Effects\bubble_pop.xnb
 Content\Music\Songs\ingame.wma
-Content\Music\Songs\menu.wma
 Levels\1.png
 Levels\01.oel
 Levels\04.oel

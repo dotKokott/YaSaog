@@ -106,13 +106,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Music\Songs\menu.mp3">
-      <Name>menu</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Music\Effects\menu_hover.wav">
       <Name>menu_hover</Name>
       <Importer>WavImporter</Importer>

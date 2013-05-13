@@ -27,7 +27,7 @@ namespace YaSaog.Scenes {
             var pos = new Vector2((MainGame.Width / 2) - 100, (MainGame.Height / 2) - 200);
 
             spriteBatch.DrawString(Assets.UI, "Christian Kokott", pos, Color.Red);
-            spriteBatch.DrawString(Assets.UI, "Art Assets: Damla", new Vector2(pos.X - 40, pos.Y + 75), Color.Yellow);
+            spriteBatch.DrawString(Assets.UI, "Art Assets: Damla", new Vector2(pos.X, pos.Y + 75), Color.Yellow);
             spriteBatch.DrawString(Assets.UI, "Sound & SFX: freesounds.org & opengameart.org (see README)", new Vector2(pos.X - 260, pos.Y + 120), Color.Yellow);
             spriteBatch.DrawString(Assets.UI, "Easing functions: xnatweener.codeplex.com", new Vector2(pos.X - 160, pos.Y + 165), Color.Yellow);
         }

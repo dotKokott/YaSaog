@@ -10,7 +10,7 @@ namespace YaSaog.Scenes {
         public override void Init() {
             base.Init();
 
-            Manager.FadeInSong(Assets.Menu, true, 0.5f);
+            Manager.FadeInSong(Assets.Menu, true, 0.2f);
 
             Manager.Game.IsMouseVisible = true;
 
